@@ -11,21 +11,6 @@ $(document).ready(function () {
     var waitTime = 0;                           // time left between rounds of questions
     var waitTimerRunning = false;               // flags for the wait timer so we don't spawn multiple timers  
 
-    //---
-    // validKey() - Determine if this an acceptable keystroke.
-    //            - Only accept r/b/y/g/h/i/s or their capital counterparts
-    //---
-    function validKey (key) {
-
-        // Regex expression parsing,  accept alphanumerics 'A', 'B', 'C' or 'D' and their lower cases only
-        if (!/^[AaBbCcDd]*$/g.test(key)) {
-            console.log("validKey() - invalid character [" + key + "]");
-            return false;
-        }
-
-        return true;
-    }
-
     //------------------------
     // playNextRound() - loads a question from the database and kicks off the round timer
     //                 - called when start button is pressed or another round ends
@@ -197,11 +182,37 @@ $(document).ready(function () {
 
         // highlight the correct answer 
 
-        // display the round result
-        $("#trivia-question").text("You answered " + (result ? "correctly" : "incorrectly"));
+        // display the round result (convert the answer from numeric 0-3 to alpha A-D)
+        var msg = "";
+        if (result)
+            msg = "Good job. You answered correctly";
+        else {
+            msg = "Nope. The correct answer was " + String.fromCharCode(game.getCorrectAnswer() + 65);
+        }
+        $("#trivia-question").text(msg);
 
-        // start the wait timer and pause before next round
+        // start the wait timer and pause actvities before next round
         startWaitTimer();
     });
+
+    
+    /******************* */
+    /* Utility Functions */
+    /******************* */
+
+    //---
+    // validKey() - Determine if this an acceptable keystroke.
+    //            - Only accept r/b/y/g/h/i/s or their capital counterparts
+    //---
+    function validKey (key) {
+
+        // Regex expression parsing,  accept alphanumerics 'A', 'B', 'C' or 'D' and their lower cases only
+        if (!/^[AaBbCcDd]*$/g.test(key)) {
+            console.log("validKey() - invalid character [" + key + "]");
+            return false;
+        }
+
+        return true;
+    }
 
 });
