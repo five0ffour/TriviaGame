@@ -1,28 +1,68 @@
 var game = {
-    totalQuestions : 10,           // number of questions in a game
+  numQuestionsPerGame: 10,  // number of questions in a game
 
-    correctAnswers : 0,             // how many they got right
-    incorrectAnswers : 0,           // how many they got wrong
-    unansweredQuestions: 0,         // how many they let timeout
-    
-    questionsLeft : this.totalQuestions, // number of questions left to ask in the current game
-    currentQuestion : 0,            // current questions on the board
-    questionsAsked : [],            // index of the questions already asked (to avoid duplicates)
+  correctAnswers: 0,        // how many they got right
+  incorrectAnswers: 0,      // how many they got wrong
+  unansweredQuestions: 0,   // how many they let timeout
 
-    categoryChoice: 0,              // category to use to source questions 
-    gradeLevelChoice: 0,            // difficulty of questions to use
+  questionsLeft: this.numQuestionsPerGame, // number of questions left to ask in the current game
+  currentQuestion: 0,       // current questions on the board
+  questionsAsked: [],       // index of the questions already asked (to avoid duplicates)
 
-    // ---------------
-    // resetGame()
-    // ---------------
-    resetGame : function () {
-        this.correctAnswer = 0;
-        this.incorrectAnswer = 0;
-        this.questionsLeft = this.totalQuestions;
-        this.currentQuestion = 0;
-        this.questionsAsked = [];
+  categoryChoice: 0,        // category to use to source questions 
+  gradeLevelChoice: 0,      // difficulty of questions to use
 
-        // clear the board
-        $("#trivia-question, #answer-txt-1, #answer-txt-2, #answer-txt-2, #answer-txt-4").empty();
+  // ---------------
+  // resetGame() -- clear the board and to get ready for a new game
+  // ---------------
+  resetGame: function () {
+    this.correctAnswer = 0;
+    this.incorrectAnswer = 0;
+    this.questionsLeft = this.numQuestionsPerGame;
+    this.currentQuestion = 0;
+    this.questionsAsked = [];
+
+    // clear the board -- this belongs in the display handler, not in this model object
+    $("#trivia-question, #answer-txt-1, #answer-txt-2, #answer-txt-2, #answer-txt-4").empty();
+  },
+
+  //-------------------
+  // generateRandomNum() - randomly generates a number within the specified range
+  //-------------------
+  generateRandomNum: function (low, high) {
+    var num = (Math.floor(Math.random() * (high - low + 1) + low));
+    // console.log("game.generateRandomNum() - The randomly selected num between " + low + " and " + high + " is: \"" + num + "\"");
+    return num;
+  },
+
+
+  // loadQuestions - selects a random question and answers from the database
+  //               - uses the category selector to choose a topic
+  //               - uses the grade level to choose the difficulty
+  loadQuestion: function () {
+
+      var found = false;                    // flag if we found a unique quesiton
+      var num = 0;                          // index into questions array
+      var count = 0;                        // counter used to find a unique question
+      var maxNum = questions.length * 2;    // number of attempts we'll allow ourselves to find a unique question
+
+      // find a unique question, one that hasn't appeared in this game
+      // put a max check in to keep us away from an infinite loop
+      while (!found & count <= maxNum) {
+        num = this.generateRandomNum(0, questions.length-1);
+
+        if (!this.questionsAsked.includes(num)) {
+          found = true;
+        }
+          
+        count++;
       }
+
+      // Save the quesion as the current one for this round
+      // Hold a copy in an array buffer so we don't choose it again
+      this.currentQuestion = num;
+      this.questionsAsked.push(num); 
+
+      console.log("game.loadQuestion() - random question selected is " + this.currentQuestion);
+  }
 }
