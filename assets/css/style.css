@@ -1,0 +1,22 @@
+/* ------ Main defaults -------- */
+body,
+html {
+    background:  url(../images/chalkboard.png);
+    /* font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;} */
+
+p {
+    padding: 0.5em;
+}
+
+/* --- General Game Sections */
+.trivia-section {
+    min-height: 500px;
+}
+
+/* ------ Jumbotron Welcome -------- */
+.bg-trivia-welcome {
+    background-image: url(../images/chalkboard.png);
+    background-size: cover;
+    color: #504747;
+}
+

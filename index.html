@@ -1,1 +1,108 @@
+<!-- Author:  Michael Galarneau                                               -->
+<!-- Class:  UNH Bootcamp                                                     -->
+<!-- Assignment:  JQuery Assignment                                           -->
+<!-- Date:  10/14/2018                                                        -->
+<!-- Filename:  index.html                                                    -->
+<!--                                                                          -->
+<!-- Notes:  This file is the main entry point for our Trivia game.           -->
+<!--     The instructions for the game are in README.md                       -->
+<!--                                                                          -->
+<!--     All javascript but the includes are abstracted out of this file and  -->
+<!--     stored in following locations:                                       -->
+<!--     app.js:       the main game processor and event loop                 -->
+<!--     questions.js: the list of questions and answers                      -->
+<!DOCTYPE <!DOCTYPE html>
+<html>
 
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Are You Smarter Than a 5th Grader</title>
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" /> -->
+
+    <!-- External CSS Stylesheets -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+    <!-- Local CSS Stylesheets -->
+    <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" /> -->
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Banner & Navigation -->
+    <div class="container-fluid trivia-section bg-trivia-welcome">
+        <div class="container">
+            <div class="row p-4"></div>
+            <div class="jumbotron">
+                <!-- Title Splash -->
+                <h1 class="text-center">Are You Smarter Than a 5th Grader?</h1>
+                <p class="lead text-center">A trivia game to remind you of all the things you've forgotten</p>
+                <hr class="my-4">
+
+                <!-- Trivia Game Configuration Row -->
+                <div class="row text-center">
+                    <div class="col-lg-4">
+                        <div id="trivia-category" value="0">History</div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="trivia-grade" value="0">1st Grade</div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div id="trivia-countdown">00:00</div>
+                    </div>
+                </div>
+
+                <!-- Start Button Row (hidden once game starts) -->
+                <div id="start-card" class="row">
+                    <div class="col-lg-12 text-center my-4">
+                        <button id="btn-start" class="btn btn-primary">Start!</button>
+                    </div>
+                </div>
+
+                <!-- Trivia Question Card (hidden before game start)-->
+                <div id="question-card" class="row my-4 text-center invisible">
+                    <div class="col-lg-12">
+                        <div id="trivia-question">None</div>
+                    </div>
+                </div>
+
+                <hr class="my-4">
+
+                <!-- Trivia Answer Cards (hiddent before game start) -->
+                <div id="answer-card" class="row text-left invisible">
+                    <div class="col-lg-6">
+                        <button id="btn-answer-A" class="trivia-button btn btn-primary" value="A">A</button>
+                        <span id="answer-txt-1" class="trivia-answer"></span>
+                        <br><br>
+                        <button id="btn-answer-B" class="trivia-button btn btn-primary" value="B">B</button>
+                        <span id="answer-txt-2" class="trivia-answer"></span>
+                    </div>
+                    <div class="col-lg-6">
+                        <button id="btn-answer-C" class="trivia-button btn btn-primary" value="C">C</button>
+                        <span id="answer-txt-3" class="trivia-answer"></span>
+                        <br><br>
+                        <button id="btn-answer-D" class="trivia-button btn btn-primary" value="D">D</button>
+                        <span id="answer-txt-4" class="trivia-answer"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript variable and function declarations -->
+    <script src="assets/javascript/game.js"></script>
+    <script src="assets/javascript/app.js"></script>
+    <script src="assets/javascript/questions.js"></script>
+    
+</body>
+
+</html>
