@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
-    /* Game Timers */
-    const secondsPerRound = 10;                 // time user is allowed to choose their answer
+    /* Global game Timers */
+    const secondsPerRound = 5;                  // time user is allowed to choose their answer
     const secondsBetweenRounds = 3;             // time user is allowed to view result and rest before next question
 
     var roundTimerId = 0;                       // round timer id for setInterval/clearInterval
@@ -11,28 +11,20 @@ $(document).ready(function () {
     var waitTime = 0;                           // time left between rounds of questions
     var waitTimerRunning = false;               // flags for the wait timer so we don't spawn multiple timers  
 
-    /********************** */
-    /* Click event Handlers */
-    /********************** */
+    //---
+    // validKey() - Determine if this an acceptable keystroke.
+    //            - Only accept r/b/y/g/h/i/s or their capital counterparts
+    //---
+    function validKey (key) {
 
-    // Game start click event
-    $("#btn-start").on("click", function () {
+        // Regex expression parsing,  accept alphanumerics 'A', 'B', 'C' or 'D' and their lower cases only
+        if (!/^[AaBbCcDd]*$/g.test(key)) {
+            console.log("validKey() - invalid character [" + key + "]");
+            return false;
+        }
 
-        // Initialize the game 
-        game.resetGame();
-
-        // Hide the start button
-        // or use css("display:none") or jQuery.hide()
-        $("#start-card").addClass("invisible");
-
-        // Display the questions & answer cards
-        // or use css("display:block") or jQuery.hide()
-        $("#question-card").removeClass("invisible");
-        $("#answer-card").removeClass("invisible");
-
-        playNextRound();
-      
-    });
+        return true;
+    }
 
     //------------------------
     // playNextRound() - loads a question from the database and kicks off the round timer
@@ -70,6 +62,13 @@ $(document).ready(function () {
         }
     }
 
+    function stopRoundTimer() {
+        if (roundTimerRunning) {
+            clearInterval(roundTimerId);
+            roundTimerRunning = false;
+        }
+    }
+
     //-----------------------------------
     // updateRoundTimer() - handles the timer event for a round of play
     //                    - if the time expires,  record it as an unanswered event and kick off wait timer for a new round
@@ -82,14 +81,12 @@ $(document).ready(function () {
 
         // Times Up!
         if (roundTime <= 0) {
-            clearInterval(roundTimerId);
-            roundTimerRunning = false;
+            stopRoundTimer();
 
             // Log unanswered result
             game.unansweredQuestions++;
 
             $("#trivia-question").text("times up, round over");
-            $("#trivia-countdown").empty();
 
             // Start a delay timer and wait between rounds
             startWaitTimer();
@@ -108,6 +105,13 @@ $(document).ready(function () {
 
     }
 
+    function stopWaitTimer() {
+        if (waitTimerRunning) {
+            clearInterval(waitTimerId);
+            waitTimerRunning = false;
+        }
+    }
+
     //---------------------
     // updateWaitTimer() - does nothing to give user a chance to rest and kicks off the next round at the end
     //----------------------
@@ -118,13 +122,35 @@ $(document).ready(function () {
 
         // Times Up!
         if (waitTime <= 0) {
-            clearInterval(waitTimerId);
-            waitTimerRunning = false;
+            stopWaitTimer();
 
             // Load the next question
             playNextRound();
         }
     }
+
+    /********************** */
+    /* Click event Handlers */
+    /********************** */
+
+    // Game start click event
+    $("#btn-start").on("click", function () {
+
+        // Initialize the game 
+        game.resetGame();
+
+        // Hide the start button
+        // or use css("display:none") or jQuery.hide()
+        $("#start-card").addClass("invisible");
+
+        // Display the questions & answer cards
+        // or use css("display:block") or jQuery.hide()
+        $("#question-card").removeClass("invisible");
+        $("#answer-card").removeClass("invisible");
+
+        playNextRound();
+      
+    });
 
     // Trivia question category selector
     $("#trivia-category").on("click", function () {
@@ -152,17 +178,25 @@ $(document).ready(function () {
         // get their answer
         var answer = $(this).val();
 
+        // validate that it is "A B C or D"
+        if (!validKey(answer)) {
+            // Ignore the invalid keys
+            return;
+        }
+
         // stop the round timer
-        clearInterval(roundTimerId);
+        stopRoundTimer();
+
+        // convert letter to numeric array index and set game state
+        var num = answer.charCodeAt() - 65;
+        var result = game.validateAnswer(num);
 
         // highlight their answer
 
-        // highlight the correct answer
-
-        // save the round result 
+        // highlight the correct answer 
 
         // display the round result
-        $("#trivia-question").text("You answered " + answer);
+        $("#trivia-question").text("You answered " + (result ? "correctly" : "incorrectly"));
 
         // start the wait timer and pause before next round
         startWaitTimer();

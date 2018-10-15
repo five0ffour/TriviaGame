@@ -4,7 +4,7 @@ var questions = [
         id: "1",
         category: "History",
         grade: "First Grade",
-        question: "The first Thanksgiving was celebrated by Native Americans and what other group of people",
+        question: "The first Thanksgiving was celebrated by Native Americans and what other group of people?",
         answers: ["Pilgrims", "Mormons", "Phoenicians", "Millenials"],
         answer: 0
     },
@@ -13,7 +13,7 @@ var questions = [
         id: "2",
         category: "History",
         grade: "First Grade",
-        question: "From which country did Mexico gain its independence in the 19th century",
+        question: "From which country did Mexico gain its independence in the 19th century?",
         answers: ["United States", "Aztecs", "Mayans", "Spain"],
         answer: 3
     },
@@ -23,8 +23,8 @@ var questions = [
         category: "History",
         grade: "First Grade",
         question: "Who invented the light bulb in 1879?",
-        answers: ["Nicolas Tesla", "Thomas Edison", "George Westinghouse", "Elon Musk"],
-        answer: 1
+        answers: ["Nicolas Tesla",  "George Westinghouse", "Thomas Edison", "Elon Musk"],
+        answer: 2
     },
 
     {
@@ -33,7 +33,7 @@ var questions = [
         grade: "First Grade",
         question: "Which language is the mostly widely spoken in South America?",
         answers: ["English", "Portuguese", "Spanish", "French"],
-        answer: 2
+        answer: 1
     },
 
     {
@@ -41,35 +41,160 @@ var questions = [
         category: "History",
         grade: "First Grade",
         question: "Neil Armstrong and Buzz Aldrin were the first two men in the entire world to do what?",
-        answers: ["Sail around the world", "Fly across the Atlantic Ocean", "Walk on the moon", "Split the atom"],
+        answers: ["Sail around the world", "Fly across the Atlantic Ocean", "Split the atom", "Walk on the moon"],
+        answer: 3
+    },
+
+    {
+        id: "6",
+        category: "History",
+        grade: "Second Grade",
+        question: "What are the three branches of the United States government?",
+        answers: ["Primary, Secondardy and Alternate", "Legal, Management, and Judiciary",  "Legislative, Judicial, and Executive", "Dumb, Dumb and Dumber"],
         answer: 2
     },
+
+    {
+        id: "7",
+        category: "History",
+        grade: "Second Grade",
+        question: "Which war was fought between the north and south regions in the United States?",
+        answers: ["The US Civil War", "The Revolutionary War",  "The War of 1812", "The French & Indian War"],
+        answer: 0
+    },
+
+    {
+        id: "8",
+        category: "History",
+        grade: "Second Grade",
+        question: "Italy, Japan, and Germany’s alliance was called what during WWII?",
+        answers: ["The Dark Ages", "The Axis of Evil",  "The Reign of Terror", "The Red Scare"],
+        answer: 1
+    },
+
+    {
+        id: "9",
+        category: "History",
+        grade: "Second Grade",
+        question: "What city was the first to be attacked by an atomic bomb?",
+        answers: ["Berlin", "Tokyo",  "Beijing", "Hiroshima"],
+        answer: 3
+    },
+
+    {
+        id: "10",
+        category: "History",
+        grade: "Second Grade",
+        question: "What are the first ten amendments to the United States Constitution called?",
+        answers: ["The Bill of Rights", "The Ten Commandments",  "The Articles of Confederacy", "The Declaration of Independence"],
+        answer: 0
+    },
+
+    {
+        id: "11",
+        category: "History",
+        grade: "Third Grade",
+        question: "What type of feather, beginning with letter Q, did people write with during the Middle Ages?",
+        answers: ["Quiver", "Quill",  "Quarrel", "Quinine"],
+        answer: 1
+    },
+
+    {
+        id: "12",
+        category: "History",
+        grade: "Third Grade",
+        question: "Julius Caesar was the emperor of what empire?",
+        answers: ["British", "Ottoman",  "Roman", "Persian"],
+        answer: 2
+    },
+
+    {
+        id: "13",
+        category: "History",
+        grade: "Third Grade",
+        question: "What is Rosa Parks most famous for?",
+        answers: ["Being the first woman to travel into space", "Winning the New York Marathon",  "Walking into a voting booth to vote", "Refusing to give her seat up in the front of the bus."],
+        answer: 3
+    },
+
+    {
+        id: "14",
+        category: "History",
+        grade: "Third Grade",
+        question: "The first fireworks were invented in the 7th century in what country?",
+        answers: ["China", "England",  "Egypt", "India"],
+        answer: 0
+    },
+
+    {
+        id: "15",
+        category: "History",
+        grade: "Third Grade",
+        question: "Name the American president on the half dollar coin who was assassinated in 1963",
+        answers: ["Richard M. Nixon", "John F. Kennedy",  "Dwight D. Eisenhower", "Franklin D. Roosevelt"],
+        answer: 1
+    },
+
+    {
+        id: "16",
+        category: "History",
+        grade: "Fourth Grade",
+        question: "What ancient civilization built the Machu Picchu complex in Peru?",
+        answers: ["The Pueblo", "The Aztecs",  "The Incas", "The Mayans"],
+        answer: 2
+    },
+
+    {
+        id: "17",
+        category: "History",
+        grade: "Fourth Grade",
+        question: "The ancient Egyptian writing system was called what?",
+        answers: ["Calligraphy", "Cuneiform",  "Sanskrit", "Hieroglyphics"],
+        answer: 3
+    },
+
+    {
+        id: "18",
+        category: "History",
+        grade: "Fourth Grade",
+        question: "From whom did the United State buy territory in the Louisiana Purchase?",
+        answers: ["Napoleon Bonaparte of France", "Queen Isabella of Spain",  "King George III of England", "Catherine the Great of Russia"],
+        answer: 0
+    },
+    
+    {
+        id: "19",
+        category: "History",
+        grade: "Fourth Grade",
+        question: "Who wrote the national anthem of the United States of America?",
+        answers: ["Betsy Ross", "Francis Scott Key",  "George M. Cohen", "Paul McCartney"],
+        answer: 1
+    },
+    
+    {
+        id: "20",
+        category: "History",
+        grade: "Fourth Grade",
+        question: "The Battle of Gettysburg was fought in which war?",
+        answers: ["The War of 1812", "King Phillips War",  "The US Civil War", "World War I"],
+        answer: 2
+    }
+];
+    
+/*    Fifth Grade
+    The what was the name of the last Queen of France? Marie Antoinette
+    
+    The region known as the “Fertile Crescent” is located in present day… Middle East
+    
+    The modern day city of Istanbul was known by what name in the 13th century… Constantinople
+    
+    The French and Indian war, which began in 1754, became the North American theater of this worldwide war that lasted from 1756 to 1763… The Seven Years War
+    In which decade did Hong Kong revert from British rule…1990s (1997)
 
 ];
 
 
 /* 
-Second Grade
-What are the three branches of the United States government? Legislative, judicial, and executive
-
-Which war was fought between the north and south regions in the United States? The Civil War
-
-Italy, Japan, and Germany’s alliance was called what during WWII? The Axis of Evil
-
-What city was the first to be attacked by an atomic bomb? Hiroshima
-
-What are the first ten amendments to the Constitution called? The Bill of Rights
-
-Third Grade
-What type of feather, beginning with letter Q, did people write with during the Middle Ages? Quill
-
-Julius Caesar was the emperor of what empire? The Roman Empire
-
-What is Rosa Parks most famous for? Refusing to give her seat up in the front of the bus.
-
-The first fireworks were invented in the 7th century in what country? China
-
-Name the American president on the half dollar coin who was assassinated in 1963. John F. Kennedy
 
 Fourth Grade
 What ancient civilization built the Machu Picchu complex in Peru? The Incas
