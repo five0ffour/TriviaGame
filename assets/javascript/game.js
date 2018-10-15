@@ -1,16 +1,18 @@
 var game = {
-  numQuestionsPerGame: 10, // number of questions in a game
+  numQuestionsPerGame: 10,  // number of questions in a game
 
-  correctAnswers: 0, // how many they got right
-  incorrectAnswers: 0, // how many they got wrong
-  unansweredQuestions: 0, // how many they let timeout
+  correctAnswers: 0,        // how many they got right
+  incorrectAnswers: 0,      // how many they got wrong
+  unansweredQuestions: 0,   // how many they let timeout
 
   questionsLeft: this.numQuestionsPerGame, // number of questions left to ask in the current game
-  currentQuestion: 0, // current questions on the board
-  questionsAsked: [], // index of the questions already asked (to avoid duplicates)
+  currentQuestion: 0,       // current questions on the board
+  questionsAsked: [],       // index of the questions already asked (to avoid duplicates)
 
-  categoryChoice: 0, // category to use to source questions 
-  gradeLevelChoice: 0, // difficulty of questions to use
+  categoryChoice: 0,        // category to use to source questions 
+  gradeLevelChoice: 0,      // difficulty of questions to use
+
+  answerGiven : false,      // don't allow a duplicate answer once we have a guess
 
   // ---------------
   // resetGame() -- clear the board and to get ready for a new game
@@ -21,6 +23,7 @@ var game = {
     this.questionsLeft = this.numQuestionsPerGame;
     this.currentQuestion = 0;
     this.questionsAsked = [];
+    this.answerGiven = false;
 
     // clear the board -- this belongs in the display handler, not in this model object
     $("#trivia-question, #answer-txt-1, #answer-txt-2, #answer-txt-2, #answer-txt-4").empty();

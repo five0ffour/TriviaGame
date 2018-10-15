@@ -176,47 +176,59 @@ var questions = [
         category: "History",
         grade: "Fourth Grade",
         question: "The Battle of Gettysburg was fought in which war?",
-        answers: ["The War of 1812", "King Phillips War",  "The US Civil War", "World War I"],
+        answers: ["The War of 1812", "The War of the Roses",  "The US Civil War", "World War I"],
         answer: 2
-    }
-];
+    },
     
-/*    Fifth Grade
-    The what was the name of the last Queen of France? Marie Antoinette
-    
-    The region known as the “Fertile Crescent” is located in present day… Middle East
-    
-    The modern day city of Istanbul was known by what name in the 13th century… Constantinople
-    
-    The French and Indian war, which began in 1754, became the North American theater of this worldwide war that lasted from 1756 to 1763… The Seven Years War
-    In which decade did Hong Kong revert from British rule…1990s (1997)
+    {
+        id: "21",
+        category: "History",
+        grade: "Fifth Grade",
+        question: "The what was the name of the last Queen of France?",
+        answers: ["Catherine of Aragon", "Queen Victoria",  "Queen Latifa", "Marie Antoinette"],
+        answer: 3
+    },
 
+    {
+        id: "22",
+        category: "History",
+        grade: "Fifth Grade",
+        question: "The region known as the “Fertile Crescent” is located in present day…",
+        answers: ["Middle East", "Midwest United States",  "Sub-Saharan Africa", "Argentina"],
+        answer: 0
+    },
+     
+    {
+        id: "23",
+        category: "History",
+        grade: "Fifth Grade",
+        question: "The modern day city of Istanbul was known by what name in the 13th century…",
+        answers: ["Ephesus", "Constantinople",  "Babylon", "Alexandria"],
+        answer: 1
+    },
+
+    {
+        id: "24",
+        category: "History",
+        grade: "Fifth Grade",
+        question: "The French and Indian war, which began in 1754, became the North American theater of this worldwide war that lasted from 1756 to 1763…",
+        answers: ["American Revolutionary War", "English Civil War",  "The Seven Years War", "King Philip's War"],
+        answer: 2
+    },
+    
+    {
+        id: "25",
+        category: "History",
+        grade: "Fifth Grade",
+        question: "In which decade did Hong Kong revert from British rule? ",
+        answers: ["1910's (1917)", "1960's (1963)",  "1880's (1885)", "1990s (1997)"],
+        answer: 3
+    },
+     
 ];
 
 
 /* 
-
-Fourth Grade
-What ancient civilization built the Machu Picchu complex in Peru? The Incas
-
-The ancient Egyptian writing system was called what? Hieroglyphics
-
-From whom did the United State buy territory in the Louisiana Purchase? Napoleon/France
-
-Who wrote the national anthem of the United States of America? Francis Scott Key
-
-The Battle of Gettysburg was fought in which war? The Civil War
-
-Fifth Grade
-The what was the name of the last Queen of France? Marie Antoinette
-
-The region known as the “Fertile Crescent” is located in present day… Middle East
-
-The modern day city of Istanbul was known by what name in the 13th century… Constantinople
-
-The French and Indian war, which began in 1754, became the North American theater of this worldwide war that lasted from 1756 to 1763… The Seven Years War
-In which decade did Hong Kong revert from British rule…1990s (1997)
-
 
 English and Literature
 First Grade

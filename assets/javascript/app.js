@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     /* Global game Timers */
-    const secondsPerRound = 5;                  // time user is allowed to choose their answer
+    const secondsPerRound = 60;                 // time user is allowed to choose their answer
     const secondsBetweenRounds = 3;             // time user is allowed to view result and rest before next question
 
     var roundTimerId = 0;                       // round timer id for setInterval/clearInterval
@@ -26,6 +26,9 @@ $(document).ready(function () {
         $("#answer-txt-2").text(questions[game.currentQuestion].answers[1]);
         $("#answer-txt-3").text(questions[game.currentQuestion].answers[2]);
         $("#answer-txt-4").text(questions[game.currentQuestion].answers[3]);
+
+        // Reset their answer state so we can accept input again
+        game.answerGiven = false;
 
         // Put 30 seconds on the clock and start the timer
         startRoundTimer();
@@ -62,7 +65,7 @@ $(document).ready(function () {
 
         // Update Game clock
         roundTime--;
-        $("#trivia-countdown").text(roundTime);
+        $("#trivia-countdown").text(timeConverter(roundTime));
 
         // Times Up!
         if (roundTime <= 0) {
@@ -120,7 +123,11 @@ $(document).ready(function () {
     /* Click event Handlers */
     /********************** */
 
-    // Game start click event
+    //------------------------------------------
+    // OnStartClick() - Game start click event 
+    //                - hides start button and displays questions/answer card
+    //                - kicks off the first question
+    //------------------------------------------
     $("#btn-start").on("click", function () {
 
         // Initialize the game 
@@ -139,7 +146,9 @@ $(document).ready(function () {
       
     });
 
-    // Trivia question category selector
+    //------------------------------------------
+    // OnCategoryClick() - Trivia question category selector -- see loadQuestion()
+    //------------------------------------------
     $("#trivia-category").on("click", function () {
 
         // Get the question category selected
@@ -148,7 +157,9 @@ $(document).ready(function () {
         // Update the question category here -- see loadQuestion()
     });
 
-    // Trivia grade level category selector
+    //------------------------------------------
+    // OnGradeClick() - Trivia grade level category selector
+    //------------------------------------------
     $("#trivia-grade").on("click", function () {
 
         // Get the difficulty selected
@@ -158,7 +169,7 @@ $(document).ready(function () {
     });
 
     //------------------------------------------
-    // Trivia answer selector handler - does the hard work of adjudicating a round of play if they answered
+    // OnAnswerClick() -nTrivia answer selector handler - does the hard work of adjudicating a round of play if they answered
     //------------------------------------------
     $(".trivia-button").on("click", function () {
 
@@ -170,6 +181,15 @@ $(document).ready(function () {
             // Ignore the invalid keys
             return;
         }
+
+        // No guessing twice!
+        if (game.answerGiven === true) {
+            // Ignore duplicate guesses
+            return;
+        }
+
+        // Make note that they made a valid guess (in case we want to stop double guessing)
+        game.answerGiven = true;
 
         // stop the round timer
         stopRoundTimer();
@@ -215,4 +235,24 @@ $(document).ready(function () {
         return true;
     }
 
+    function timeConverter (t) {
+
+        //  Takes the current time in seconds and convert it to minutes and seconds (mm:ss).
+        var minutes = Math.floor(t / 60);
+        var seconds = t - (minutes * 60);
+    
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+    
+        if (minutes === 0) {
+          minutes = "00";
+        }
+    
+        else if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+    
+        return minutes + ":" + seconds;
+      }
 });
