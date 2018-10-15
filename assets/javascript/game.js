@@ -66,9 +66,11 @@ var game = {
     console.log("game.loadQuestion() - random question selected is " + this.currentQuestion);
   },
 
+  //-------------------------
   // validateAnswer() - process the user's guess to determine a correct/incorrect
   //                  - updates the appropriate game counter
   //                  - returns true if the answer was correct, false if otherwise
+  //-------------------------
   validateAnswer: function (answer) {
 
     var answeredCorrectly = false;
@@ -81,17 +83,23 @@ var game = {
     }
 
     // check answer against questions database for the current question
-    var correctAnswer = questions[this.currentQuestion].answer;
-    if (answer === correctAnswer) {
+    if (answer === this.getCorrectAnswer()) {
       console.log("game.validateAnswer() -- they chose... wisely with " + answer);
       this.correctAnswers++;
       answeredCorrectly = true;
     } else {
-      console.log("game.validateAnswer() -- they chose... poorly with " + answer + " instead of " + +correctAnswer);
+      console.log("game.validateAnswer() -- they chose... poorly with " + answer + " instead of " + this.getCorrectAnswer());
       this.incorrectAnswers++
       answeredCorrectly = false;
     }
 
     return answeredCorrectly;
+  },
+
+  //-------------------------
+  // getCorrectAnswer() - utilty function to lookup correct answer from the answer database
+  //-------------------------
+  getCorrectAnswer : function() {
+    return questions[this.currentQuestion].answer;
   }
 }

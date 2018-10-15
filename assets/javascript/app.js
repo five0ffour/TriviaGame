@@ -86,7 +86,9 @@ $(document).ready(function () {
             // Log unanswered result
             game.unansweredQuestions++;
 
-            $("#trivia-question").text("times up, round over");
+            // convert the answer from number 0-3 to letter A-D & display
+            var ansKey =  String.fromCharCode(game.getCorrectAnswer() + 65);
+            $("#trivia-question").text("Times up!  The correct answer was " + ansKey);
 
             // Start a delay timer and wait between rounds
             startWaitTimer();
