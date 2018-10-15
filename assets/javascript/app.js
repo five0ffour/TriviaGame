@@ -17,18 +17,17 @@ $(document).ready(function () {
     //------------------------
     function playNextRound() {
 
-        // load the question
-        game.loadQuestion();
-
-        // display the question
-        $("#trivia-question").text(questions[game.currentQuestion].question);
-        $("#answer-txt-1").text(questions[game.currentQuestion].answers[0]);
-        $("#answer-txt-2").text(questions[game.currentQuestion].answers[1]);
-        $("#answer-txt-3").text(questions[game.currentQuestion].answers[2]);
-        $("#answer-txt-4").text(questions[game.currentQuestion].answers[3]);
-
         // Reset their answer state so we can accept input again
         game.answerGiven = false;
+
+        // load the questions from the back end data store
+        game.loadQuestion();
+
+        // Hide the results window
+        hideResults();
+
+        // Display the questions and answers on the jumbotron
+        showQuestions();
 
         // Put 30 seconds on the clock and start the timer
         startRoundTimer();
@@ -74,9 +73,7 @@ $(document).ready(function () {
             // Log unanswered result
             game.unansweredQuestions++;
 
-            // convert the answer from number 0-3 to letter A-D & display
-            var ansKey =  String.fromCharCode(game.getCorrectAnswer() + 65);
-            $("#trivia-question").text("Times up!  The correct answer was " + ansKey);
+            showResults();
 
             // Start a delay timer and wait between rounds
             startWaitTimer();
@@ -92,7 +89,6 @@ $(document).ready(function () {
             waitTimerId = setInterval(updateWaitTimer, 1000);
             waitTimerRunning = true;
         }
-
     }
 
     function stopWaitTimer() {
@@ -114,9 +110,73 @@ $(document).ready(function () {
         if (waitTime <= 0) {
             stopWaitTimer();
 
+            hideResults();
+
             // Load the next question
             playNextRound();
         }
+    }
+
+    //-----------------------------
+    // hideQuestions() - jQuery routines to hide the questions out of view
+    //-----------------------------
+    function hideQuestions() {
+
+        // Display the questions & answer cards
+        // or use css("display:block") or jQuery.hide()
+        $("#question-card").addClass("invisible");
+        $("#answer-card").addClass("invisible");
+        $(".jumbotron").hide();
+    }
+
+    //-----------------------------
+    // showQuestions() - jQuery routines to display the questions on the jumbotron
+    //-----------------------------
+    function showQuestions() {
+
+        // update the display with the question and possible answers
+        $("#trivia-question").text(questions[game.currentQuestion].question);
+        $("#answer-txt-1").text(questions[game.currentQuestion].answers[0]);
+        $("#answer-txt-2").text(questions[game.currentQuestion].answers[1]);
+        $("#answer-txt-3").text(questions[game.currentQuestion].answers[2]);
+        $("#answer-txt-4").text(questions[game.currentQuestion].answers[3]);
+        
+        // Display the questions & answer cards
+        // or use css("display:block") or jQuery.hide()
+        $("#question-card").removeClass("invisible");
+        $("#answer-card").removeClass("invisible");
+        $(".jumbotron").show();
+
+    }
+
+    //-----------------------------
+    // hideResults() - jQuery routines to hide the results pane out of view
+    //-----------------------------
+    function hideResults() {
+
+        // Display the questions & answer cards
+        // or use css("display:block") or jQuery.hide()
+        $("#results-card").addClass("invisible");
+    }
+
+    //-----------------------------
+    // showResults() - jQuery routines to display the results pane on the jumbotron
+    //-----------------------------
+    function showResults() {
+
+        // display the round result (convert the answer from numeric 0-3 to alpha A-D)
+        if (game.roundResult) {
+            $("#results-title").text("Correct!");
+            $("#results-text").text("Good job. You answered correctly");
+        }
+        else {
+            $("#results-title").text("Incorrect!");
+            $("#results-text").text("Sorry, the correct answer was " + String.fromCharCode(game.getCorrectAnswer() + 65));
+        }
+
+        // Display the questions & answer cards
+        // or use css("display:block") or jQuery.hide()
+        $("#results-card").removeClass("invisible");
     }
 
     /********************** */
@@ -136,11 +196,6 @@ $(document).ready(function () {
         // Hide the start button
         // or use css("display:none") or jQuery.hide()
         $("#start-card").addClass("invisible");
-
-        // Display the questions & answer cards
-        // or use css("display:block") or jQuery.hide()
-        $("#question-card").removeClass("invisible");
-        $("#answer-card").removeClass("invisible");
 
         playNextRound();
       
@@ -169,9 +224,9 @@ $(document).ready(function () {
     });
 
     //------------------------------------------
-    // OnAnswerClick() -nTrivia answer selector handler - does the hard work of adjudicating a round of play if they answered
+    // OnAnswerClick() -Trivia answer selector handler - does the hard work of adjudicating a round of play if they answered
     //------------------------------------------
-    $(".trivia-button").on("click", function () {
+    $(".answer-button").on("click", function () {
 
         // get their answer
         var answer = $(this).val();
@@ -196,22 +251,17 @@ $(document).ready(function () {
 
         // convert letter to numeric array index and set game state
         var num = answer.charCodeAt() - 65;
-        var result = game.validateAnswer(num);
+        game.validateAnswer(num);
 
         // highlight their answer
 
         // highlight the correct answer 
 
-        // display the round result (convert the answer from numeric 0-3 to alpha A-D)
-        var msg = "";
-        if (result)
-            msg = "Good job. You answered correctly";
-        else {
-            msg = "Nope. The correct answer was " + String.fromCharCode(game.getCorrectAnswer() + 65);
-        }
-        $("#trivia-question").text(msg);
+        // Hide the questions and show the results
+        hideQuestions();
+        showResults();
 
-        // start the wait timer and pause actvities before next round
+        // start the wait timer and show the result
         startWaitTimer();
     });
 

@@ -81,29 +81,38 @@
                 <!-- Trivia Answer Cards (hiddent before game start) -->
                 <div id="answer-card" class="row text-left invisible">
                     <div class="col-lg-6">
-                        <button id="btn-answer-A" class="trivia-button btn btn-primary" value="A">A</button>
+                        <button id="btn-answer-A" class="answer-button btn btn-primary" value="A">A</button>
                         <span id="answer-txt-1" class="trivia-answer"></span>
                         <br><br>
-                        <button id="btn-answer-B" class="trivia-button btn btn-primary" value="B">B</button>
+                        <button id="btn-answer-B" class="answer-button btn btn-primary" value="B">B</button>
                         <span id="answer-txt-2" class="trivia-answer"></span>
                     </div>
                     <div class="col-lg-6">
-                        <button id="btn-answer-C" class="trivia-button btn btn-primary" value="C">C</button>
+                        <button id="btn-answer-C" class="answer-button btn btn-primary" value="C">C</button>
                         <span id="answer-txt-3" class="trivia-answer"></span>
                         <br><br>
-                        <button id="btn-answer-D" class="trivia-button btn btn-primary" value="D">D</button>
+                        <button id="btn-answer-D" class="answer-button btn btn-primary" value="D">D</button>
                         <span id="answer-txt-4" class="trivia-answer"></span>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+        <!-- Javascript variable and function declarations -->
+        <script src="assets/javascript/game.js"></script>
+        <script src="assets/javascript/app.js"></script>
+        <script src="assets/javascript/questions.js"></script>
 
-    <!-- Javascript variable and function declarations -->
-    <script src="assets/javascript/game.js"></script>
-    <script src="assets/javascript/app.js"></script>
-    <script src="assets/javascript/questions.js"></script>
-    
+        <!-- Results Card & Image -->
+        <div id="results-card" class="card bg-dark text-white invisible">
+            <img class="card-img" src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Scene_at_the_Signing_of_the_Constitution_of_the_United_States.jpg"
+                alt="Results card">
+            <div class="card-img-overlay">
+                <h5 id="results-title" class="card-title">None</h5>
+                <p id="results-text" class="card-text">Your answer here</p>
+            </div>
+        </div>
+
+
 </body>
 
 </html>

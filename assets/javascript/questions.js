@@ -220,8 +220,8 @@ var questions = [
         id: "25",
         category: "History",
         grade: "Fifth Grade",
-        question: "In which decade did Hong Kong revert from British rule? ",
-        answers: ["1910's (1917)", "1960's (1963)",  "1880's (1885)", "1990s (1997)"],
+        question: "What year did Hong Kong revert from British rule? ",
+        answers: ["1917", "1692",  "1885", "1997"],
         answer: 3
     },
      

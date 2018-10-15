@@ -13,7 +13,8 @@ var game = {
   gradeLevelChoice: 0,      // difficulty of questions to use
 
   answerGiven : false,      // don't allow a duplicate answer once we have a guess
-
+  roundResult : false,      // did they get the answer right (true) or wrong (false)
+  
   // ---------------
   // resetGame() -- clear the board and to get ready for a new game
   // ---------------
@@ -24,6 +25,7 @@ var game = {
     this.currentQuestion = 0;
     this.questionsAsked = [];
     this.answerGiven = false;
+    this.roundResult = false;
 
     // clear the board -- this belongs in the display handler, not in this model object
     $("#trivia-question, #answer-txt-1, #answer-txt-2, #answer-txt-2, #answer-txt-4").empty();
@@ -76,8 +78,6 @@ var game = {
   //-------------------------
   validateAnswer: function (answer) {
 
-    var answeredCorrectly = false;
-
     // validate to be numeric to index the answer arrays
     if ((answer < 0) ||
       (answer >= questions[this.currentQuestion].answers.length)) {
@@ -89,14 +89,14 @@ var game = {
     if (answer === this.getCorrectAnswer()) {
       console.log("game.validateAnswer() -- they chose... wisely with " + answer);
       this.correctAnswers++;
-      answeredCorrectly = true;
+      this.roundResult = true;
     } else {
       console.log("game.validateAnswer() -- they chose... poorly with " + answer + " instead of " + this.getCorrectAnswer());
       this.incorrectAnswers++
-      answeredCorrectly = false;
+      this.roundResult = false;
     }
 
-    return answeredCorrectly;
+    return this.roundResult;
   },
 
   //-------------------------
