@@ -6,7 +6,8 @@ var questions = [
         grade: "First Grade",
         question: "The first Thanksgiving was celebrated by Native Americans and what other group of people?",
         answers: ["Pilgrims", "Mormons", "Phoenicians", "Millenials"],
-        answer: 0
+        answer: 0,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/2/2c/Landing-Bacon.PNG"
     },
 
     {
@@ -15,7 +16,8 @@ var questions = [
         grade: "First Grade",
         question: "From which country did Mexico gain its independence in the 19th century?",
         answers: ["United States", "Aztecs", "Mayans", "Spain"],
-        answer: 3
+        answer: 3,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/9/96/Collage_Independencia.jpg"
     },
 
     {
@@ -24,7 +26,8 @@ var questions = [
         grade: "First Grade",
         question: "Who invented the light bulb in 1879?",
         answers: ["Nicolas Tesla",  "George Westinghouse", "Thomas Edison", "Elon Musk"],
-        answer: 2
+        answer: 2,
+        splash: "https://en.wikipedia.org/wiki/Thomas_Edison#/media/File:Menlo_Park_Laboratory.JPG"
     },
 
     {
@@ -33,7 +36,8 @@ var questions = [
         grade: "First Grade",
         question: "Which language is the mostly widely spoken in South America?",
         answers: ["English", "Portuguese", "Spanish", "French"],
-        answer: 1
+        answer: 1,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Desembarque_de_Pedro_%C3%81lvares_Cabral_em_Porto_Seguro_em_1500_by_Oscar_Pereira_da_Silva_%281865%E2%80%931939%29.jpg",
     },
 
     {
@@ -42,7 +46,8 @@ var questions = [
         grade: "First Grade",
         question: "Neil Armstrong and Buzz Aldrin were the first two men in the entire world to do what?",
         answers: ["Sail around the world", "Fly across the Atlantic Ocean", "Split the atom", "Walk on the moon"],
-        answer: 3
+        answer: 3,
+        splash: "https://en.wikipedia.org/wiki/Apollo_11#/media/File:Aldrin_Apollo_11_original.jpg"
     },
 
     {
@@ -51,7 +56,8 @@ var questions = [
         grade: "Second Grade",
         question: "What are the three branches of the United States government?",
         answers: ["Primary, Secondardy and Alternate", "Legal, Management, and Judiciary",  "Legislative, Judicial, and Executive", "Dumb, Dumb and Dumber"],
-        answer: 2
+        answer: 2,
+        splash: "https://app_usa_prod_eqffnyamdzrb.s3.amazonaws.com/USA_Government_Branches_Infographic.png"
     },
 
     {
@@ -60,7 +66,8 @@ var questions = [
         grade: "Second Grade",
         question: "Which war was fought between the north and south regions in the United States?",
         answers: ["The US Civil War", "The Revolutionary War",  "The War of 1812", "The French & Indian War"],
-        answer: 0
+        answer: 0,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/c/c7/CivilWarUSAColl.png"
     },
 
     {
@@ -68,8 +75,9 @@ var questions = [
         category: "History",
         grade: "Second Grade",
         question: "Italy, Japan, and Germany’s alliance was called what during WWII?",
-        answers: ["The Dark Ages", "The Axis of Evil",  "The Reign of Terror", "The Red Scare"],
-        answer: 1
+        answers: ["The Dark Ages", "The Axis Powers",  "The Reign of Terror", "The Red Scare"],
+        answer: 1,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/a/ad/Bundesarchiv_Bild_183-L09218%2C_Berlin%2C_Japanische_Botschaft.jpg"
     },
 
     {
@@ -78,7 +86,8 @@ var questions = [
         grade: "Second Grade",
         question: "What city was the first to be attacked by an atomic bomb?",
         answers: ["Berlin", "Tokyo",  "Beijing", "Hiroshima"],
-        answer: 3
+        answer: 3,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/5/54/Atomic_bombing_of_Japan.jpg"
     },
 
     {
@@ -87,7 +96,8 @@ var questions = [
         grade: "Second Grade",
         question: "What are the first ten amendments to the United States Constitution called?",
         answers: ["The Bill of Rights", "The Ten Commandments",  "The Articles of Confederacy", "The Declaration of Independence"],
-        answer: 0
+        answer: 0,
+        splash : "https://upload.wikimedia.org/wikipedia/commons/9/9d/Scene_at_the_Signing_of_the_Constitution_of_the_United_States.jpg"
     },
 
     {
@@ -96,7 +106,8 @@ var questions = [
         grade: "Third Grade",
         question: "What type of feather, beginning with letter Q, did people write with during the Middle Ages?",
         answers: ["Quiver", "Quill",  "Quarrel", "Quinine"],
-        answer: 1
+        answer: 1,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/The_bookkeeper_by_van_Dijk.jpg/800px-The_bookkeeper_by_van_Dijk.jpg"
     },
 
     {
@@ -105,7 +116,8 @@ var questions = [
         grade: "Third Grade",
         question: "Julius Caesar was the emperor of what empire?",
         answers: ["British", "Ottoman",  "Roman", "Persian"],
-        answer: 2
+        answer: 2,
+        splash: "https://en.wikipedia.org/wiki/Julius_Caesar#/media/File:Siege-alesia-vercingetorix-jules-cesar.jpg"
     },
 
     {
@@ -114,7 +126,8 @@ var questions = [
         grade: "Third Grade",
         question: "What is Rosa Parks most famous for?",
         answers: ["Being the first woman to travel into space", "Winning the New York Marathon",  "Walking into a voting booth to vote", "Refusing to give her seat up in the front of the bus."],
-        answer: 3
+        answer: 3,
+        splash: "https://upload.wikimedia.org/wikipedia/en/8/80/Rosaparks_bus.jpg"
     },
 
     {
@@ -123,7 +136,8 @@ var questions = [
         grade: "Third Grade",
         question: "The first fireworks were invented in the 7th century in what country?",
         answers: ["China", "England",  "Egypt", "India"],
-        answer: 0
+        answer: 0,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/7/7c/Flametest--Cu.swn.jpg"
     },
 
     {
@@ -132,7 +146,8 @@ var questions = [
         grade: "Third Grade",
         question: "Name the American president on the half dollar coin who was assassinated in 1963",
         answers: ["Richard M. Nixon", "John F. Kennedy",  "Dwight D. Eisenhower", "Franklin D. Roosevelt"],
-        answer: 1
+        answer: 1,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/0/07/US_Half_Dollar_Obverse_2015.png"
     },
 
     {
@@ -141,7 +156,8 @@ var questions = [
         grade: "Fourth Grade",
         question: "What ancient civilization built the Machu Picchu complex in Peru?",
         answers: ["The Pueblo", "The Aztecs",  "The Incas", "The Mayans"],
-        answer: 2
+        answer: 2,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/0/01/80_-_Machu_Picchu_-_Juin_2009_-_edit.2.jpg"
     },
 
     {
@@ -150,7 +166,8 @@ var questions = [
         grade: "Fourth Grade",
         question: "The ancient Egyptian writing system was called what?",
         answers: ["Calligraphy", "Cuneiform",  "Sanskrit", "Hieroglyphics"],
-        answer: 3
+        answer: 3,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/c/c9/Hieroglyphs_from_the_tomb_of_Seti_I.jpg"
     },
 
     {
@@ -159,7 +176,8 @@ var questions = [
         grade: "Fourth Grade",
         question: "From whom did the United State buy territory in the Louisiana Purchase?",
         answers: ["Napoleon Bonaparte of France", "Queen Isabella of Spain",  "King George III of England", "Catherine the Great of Russia"],
-        answer: 0
+        answer: 0,
+        splash: "https://en.wikipedia.org/wiki/Louisiana_Purchase#/media/File:Louisiana_Purchase.png"
     },
     
     {
@@ -168,7 +186,8 @@ var questions = [
         grade: "Fourth Grade",
         question: "Who wrote the national anthem of the United States of America?",
         answers: ["Betsy Ross", "Francis Scott Key",  "George M. Cohen", "Paul McCartney"],
-        answer: 1
+        answer: 1,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/6/6d/Fort_mc_henry_cannon_Baltimore.jpg"
     },
     
     {
@@ -177,7 +196,8 @@ var questions = [
         grade: "Fourth Grade",
         question: "The Battle of Gettysburg was fought in which war?",
         answers: ["The War of 1812", "The War of the Roses",  "The US Civil War", "World War I"],
-        answer: 2
+        answer: 2,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/0/0f/Thure_de_Thulstrup_-_L._Prang_and_Co._-_Battle_of_Gettysburg_-_Restoration_by_Adam_Cuerden_%28cropped%29.jpg"
     },
     
     {
@@ -186,7 +206,8 @@ var questions = [
         grade: "Fifth Grade",
         question: "The what was the name of the last Queen of France?",
         answers: ["Catherine of Aragon", "Queen Victoria",  "Queen Latifa", "Marie Antoinette"],
-        answer: 3
+        answer: 3,
+        splash: "https://upload.wikimedia.org/wikipedia/commons/4/4f/Marie_Antoinette_Adult.jpg"
     },
 
     {
@@ -195,7 +216,8 @@ var questions = [
         grade: "Fifth Grade",
         question: "The region known as the “Fertile Crescent” is located in present day…",
         answers: ["Middle East", "Midwest United States",  "Sub-Saharan Africa", "Argentina"],
-        answer: 0
+        answer: 0,
+        splash: "https://en.wikipedia.org/wiki/Fertile_Crescent#/media/File:Map_of_fertile_crescent.svg"
     },
      
     {
@@ -204,7 +226,8 @@ var questions = [
         grade: "Fifth Grade",
         question: "The modern day city of Istanbul was known by what name in the 13th century…",
         answers: ["Ephesus", "Constantinople",  "Babylon", "Alexandria"],
-        answer: 1
+        answer: 1,
+        splash: "https://en.wikipedia.org/wiki/Constantinople#/media/File:Walls_of_Constantinople.JPG"
     },
 
     {
@@ -213,7 +236,8 @@ var questions = [
         grade: "Fifth Grade",
         question: "The French and Indian war, which began in 1754, became the North American theater of this worldwide war that lasted from 1756 to 1763…",
         answers: ["American Revolutionary War", "English Civil War",  "The Seven Years War", "King Philip's War"],
-        answer: 2
+        answer: 2,
+        splash: "https://en.wikipedia.org/wiki/Seven_Years%27_War#/media/File:Seven_Years%27_War_Collage.jpg"
     },
     
     {
@@ -222,7 +246,8 @@ var questions = [
         grade: "Fifth Grade",
         question: "What year did Hong Kong revert from British rule? ",
         answers: ["1917", "1692",  "1885", "1997"],
-        answer: 3
+        answer: 3,
+        splash: "https://en.wikipedia.org/wiki/Hong_Kong#/media/File:Cross_Harbour_Tunnel_(1).JPG"
     },
      
 ];
