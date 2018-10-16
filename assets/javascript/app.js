@@ -2,7 +2,7 @@ $(document).ready(function () {
 
     /* Global game Timers */
     const secondsPerRound = 60;                 // time user is allowed to choose their answer
-    const secondsBetweenRounds = 3;             // time user is allowed to view result and rest before next question
+    const secondsBetweenRounds = 5;             // time user is allowed to view result and rest before next question
 
     var roundTimerId = 0;                       // round timer id for setInterval/clearInterval
     var roundTime = 0;                          // time left for this question round
@@ -150,7 +150,7 @@ $(document).ready(function () {
     }
 
     //-----------------------------
-    // hideResults() - jQuery routines to hide the results pane out of view
+    // hideResults() -  hide the results pane out of view
     //-----------------------------
     function hideResults() {
 
@@ -160,9 +160,15 @@ $(document).ready(function () {
     }
 
     //-----------------------------
-    // showResults() - jQuery routines to display the results pane on the jumbotron
+    // showResults() -  display the results pane on the jumbotron
     //-----------------------------
     function showResults() {
+
+        // Display a background appropriate to the question
+        $("#results-img").attr("src",questions[game.currentQuestion].splash);
+        var target = $("#results-img");
+        target.attr("width","500px");
+        target.attr("height","500px");
 
         // display the round result (convert the answer from numeric 0-3 to alpha A-D)
         if (game.roundResult) {
