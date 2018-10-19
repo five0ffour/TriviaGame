@@ -2,36 +2,103 @@
 body,
 html {
     background:  url(../images/chalkboard.png);
-    /* font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;} */
+    font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
+}
 
 p {
     padding: 0.5em;
 }
 
-/* --- General Game Sections */
-.trivia-section {
-    min-height: 500px;
+/* fonts */
+@font-face {
+    font-family: 'DK Crayon Crumble';
+    src: url(../fonts/DK\ Crayon\ Crumble.ttf);
+ }
+
+ /* Main content section - added drop shadow */
+.page { 
+    position:  relative;
+    top: 60px;
+
+    background-color: #ffffff;
+    border-color: #000000;
+
+    box-shadow: 5px 5px 4px #000000;
+    border-radius: 10px;
+    width: 80%;
+    height: 400px;
+    margin: 20px auto;
+    overflow: auto;
+}
+ 
+/* Banner */
+.nav {
+    margin: 2px;
 }
 
-/* ------ Jumbotron Welcome -------- */
-.bg-trivia-welcome {
-    background-image: url(../images/chalkboard.png);
-    background-size: cover;
-    color: #504747;
+#title {
+    text-align: center;
+    font-size: 4.0em;
+    color: #ffffff;
+    font-family: 'DK Crayon Crumble';
+    margin: 2px;
+}
+
+#subtitle {
+    text-align: center;
+    font-size: 1.5em;
+    color: #ffffff;
+    font-family: 'DK Crayon Crumble';
+    margin: 2px;
+}
+
+/* content in the page's section */
+.content {
+    padding: 0 10px 10px 10px;
 }
 
 /* ------ Results Card -------- */
 #results-card {
     position: fixed; /* forces the element to stay fixed in relation to the viewport */
-    top: 50%; /* sets the top of the image 50% of the page height */
+    top: 25%; /* sets the top of the image 50% of the page height */
     left: 50%; /* sets the left side of the image 50% across the page */
-    margin-left: -100px; /* moves the image half of its own width to the left-side of the page */
+    margin-left: -200px; /* moves the image half of its own width to the left-side of the page */
     margin-top: -93px; /* moves the image half its height 'up' the page */
+    margin-bottom: auto;
+    max-width: 400px;
+    border: solid 5px green;
+
+    overflow:hiden;
+
     box-shadow: 0.5em 0.5em 0.7em #333; /* to give the illusion of 'floating' */
     border-radius: 1em;
 }
 
 #results-img {
-    height: auto;
-    width: 50%;
+    height: 400px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+#results-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'DK Crayon Crumble';
+    background-color: #4aaaa5;
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 10px;
+    margin: 2px;
+    padding: 0.25em;
+}
+
+#results-text {
+    font-family: 'DK Crayon Crumble';
+    text-align: center;
+    color: #ffffff;
+    font-size: 1.5em;
+    margin: 2px;
 }

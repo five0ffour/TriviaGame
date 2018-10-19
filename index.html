@@ -12,7 +12,7 @@
 <!--     app.js:       the main game processor and event loop                 -->
 <!--     game.js:      game state management                                  -->
 <!--     questions.js: the list of questions and answers                      -->
-<!DOCTYPE <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -26,8 +26,6 @@
 
     <!-- External CSS Stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
 
     <!-- Local CSS Stylesheets -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" /> -->
@@ -39,85 +37,60 @@
 </head>
 
 <body>
+    <header>
+        <!-- Title Splash -->
+        <div class="nav">
+            <h1 id="title">Don't Know Much About History</h1>
+            <h2 id="subtitle">A trivia game to remind you of all the things you've forgotten</h2>
+        </div>
+    </header>
+
     <!-- Banner & Navigation -->
-    <div class="container-fluid trivia-section bg-trivia-welcome">
-        <div class="container">
-            <div class="row p-4"></div>
-            <div class="jumbotron">
-                <!-- Title Splash -->
-                <h1 class="text-center">Don't Know Much About History</h1>
-                <p class="lead text-center">A trivia game to remind you of all the things you've forgotten</p>
+    <div class="page">
+        <div class="content">
+
+            <!-- Trivia Game Configuration Row -->
+            <div id="category-hdr">
+                <div id="trivia-category" value="0">History</div>
+                <div id="trivia-grade" value="0">1st Grade</div>
+                <div id="trivia-countdown">00:00</div>
+            </div>
+
+            <!-- Start Button Row (hidden once game starts) -->
+            <button id="btn-start">Start!</button>
+
+            <!-- Trivia Question Card (hidden before game start)-->
+            <div id="question-card" style="display:none">
+                <div id="trivia-question">None</div>
                 <hr class="my-4">
+            </div>
 
-                <!-- Trivia Game Configuration Row -->
-                <div class="row text-center">
-                    <div class="col-lg-4">
-                        <div id="trivia-category" value="0">History</div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div id="trivia-grade" value="0">1st Grade</div>
-                    </div>
-                    <div class="col-lg-4">
-                        <div id="trivia-countdown">00:00</div>
-                    </div>
-                </div>
 
-                <!-- Start Button Row (hidden once game starts) -->
-                <div id="start-card" class="row">
-                    <div class="col-lg-12 text-center my-4">
-                        <button id="btn-start" class="btn btn-primary">Start!</button>
-                    </div>
-                </div>
-
-                <!-- Trivia Question Card (hidden before game start)-->
-                <div id="question-card" class="row my-4 text-center invisible">
-                    <div class="col-lg-12">
-                        <div id="trivia-question">None</div>
-                    </div>
-                </div>
-
-                <hr class="my-4">
-
-                <!-- Trivia Answer Cards (hiddent before game start) -->
-                <div id="answer-card" class="invisible">
-                    <div class="row text-left">
-                        <div class="col-lg-6 my-1">
-                            <button id="btn-answer-A" class="answer-button btn btn-primary" value="A">A</button>
-                            <span id="answer-txt-1" class="trivia-answer"></span>
-                        </div>
-                        <div class="col-lg-6 my-1">
-                            <button id="btn-answer-B" class="answer-button btn btn-primary" value="B">B</button>
-                            <span id="answer-txt-2" class="trivia-answer"></span>
-                        </div>
-                    </div>
-                    <div class="row text-left">
-                        <div class="col-lg-6 my-1">
-                            <button id="btn-answer-C" class="answer-button btn btn-primary" value="C">C</button>
-                            <span id="answer-txt-3" class="trivia-answer"></span>
-                        </div>
-                        <div class="col-lg-6 my-1">
-                            <button id="btn-answer-D" class="answer-button btn btn-primary" value="D">D</button>
-                            <span id="answer-txt-4" class="trivia-answer"></span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Trivia Answer Cards (hidden before game start) -->
+            <div id="answer-card" style="display:none">
+                <button id="btn-answer-A" class="answer-button" value="A">A</button>
+                <span id="answer-txt-1" class="trivia-answer"></span>
+                <button id="btn-answer-B" class="answer-button" value="B">B</button>
+                <span id="answer-txt-2" class="trivia-answer"></span>
+                <button id="btn-answer-C" class="answer-button" value="C">C</button>
+                <span id="answer-txt-3" class="trivia-answer"></span>
+                <button id="btn-answer-D" class="answer-button" value="D">D</button>
+                <span id="answer-txt-4" class="trivia-answer"></span>
             </div>
         </div>
     </div>
+
     <!-- Javascript variable and function declarations -->
     <script src="assets/javascript/game.js"></script>
     <script src="assets/javascript/app.js"></script>
     <script src="assets/javascript/questions.js"></script>
 
     <!-- Results Card & Image -->
-    <div id="results-card" class="card bg-dark text-white invisible">
+    <div id="results-card" style="display:none">
+        <h5 id="results-title" class="card-title">None</h5>
         <img id="results-img" class="card-img" src="" alt="Results image">
-        <div class="card-img-overlay">
-            <h5 id="results-title" class="card-title">None</h5>
-            <p id="results-text" class="card-text">Your answer here</p>
-        </div>
+        <p id="results-text" class="card-text">Your answer here</p>
     </div>
-
 
 </body>
 

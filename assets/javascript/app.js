@@ -122,11 +122,13 @@ $(document).ready(function () {
     //-----------------------------
     function hideQuestions() {
 
-        // Display the questions & answer cards
+        // Hide the questions & answer cards
         // or use css("display:block") or jQuery.hide()
-        $("#question-card").addClass("invisible");
-        $("#answer-card").addClass("invisible");
-        $(".jumbotron").hide();
+        // $("#question-card").addClass("invisible");
+        // $("#answer-card").addClass("invisible");
+        $("#question-card").hide();
+        $("#answer-card").hide();
+        $(".page").hide();
     }
 
     //-----------------------------
@@ -143,9 +145,11 @@ $(document).ready(function () {
         
         // Display the questions & answer cards
         // or use css("display:block") or jQuery.hide()
-        $("#question-card").removeClass("invisible");
-        $("#answer-card").removeClass("invisible");
-        $(".jumbotron").show();
+        // $("#question-card").removeClass("invisible");
+        // $("#answer-card").removeClass("invisible");
+        $("#question-card").show();
+        $("#answer-card").show();
+        $(".page").show();
 
     }
 
@@ -156,7 +160,8 @@ $(document).ready(function () {
 
         // Display the questions & answer cards
         // or use css("display:block") or jQuery.hide()
-        $("#results-card").addClass("invisible");
+        // $("#results-card").addClass("invisible");
+        $("#results-card").hide();
     }
 
     //-----------------------------
@@ -172,17 +177,23 @@ $(document).ready(function () {
 
         // display the round result (convert the answer from numeric 0-3 to alpha A-D)
         if (game.roundResult) {
+            $("#results-card").css("border-color", "green");
             $("#results-title").text("Correct!");
             $("#results-text").text("Good job. You answered correctly");
         }
         else {
-            $("#results-title").text("Incorrect!");
-            $("#results-text").text("Sorry, the correct answer was " + String.fromCharCode(game.getCorrectAnswer() + 65));
+            var answerIdx = game.getCorrectAnswer();
+            $("#results-card").css("border-color", "red");
+            $("#results-title").text("Sorry, Incorrect!");
+            $("#results-text").text("It was " +
+                                     String.fromCharCode(answerIdx + 65) + ": '" +
+                                     questions[game.currentQuestion].answers[answerIdx] + "'");
         }
 
         // Display the questions & answer cards
         // or use css("display:block") or jQuery.hide()
-        $("#results-card").removeClass("invisible");
+        // $("#results-card").removeClass("invisible");
+        $("#results-card").show();
     }
 
     /********************** */

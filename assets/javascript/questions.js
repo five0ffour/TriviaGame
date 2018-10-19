@@ -147,7 +147,7 @@ var questions = [
         question: "Name the American president on the half dollar coin who was assassinated in 1963",
         answers: ["Richard M. Nixon", "John F. Kennedy",  "Dwight D. Eisenhower", "Franklin D. Roosevelt"],
         answer: 1,
-        splash: "assets/images/jfk.png"
+        splash: "assets/images/jfk.jpg"
     },
 
     {
