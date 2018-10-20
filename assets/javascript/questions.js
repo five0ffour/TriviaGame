@@ -418,7 +418,7 @@ var questions = [
         id: "42",
         category: "English",
         grade: "4th Grade",
-        question: "What is the main character in a story called?",
+        question: "What type of word is truthfully?",
         answers: ["a gerund", "an adjective",  "a nound", "an adverb"],
         answer: 3,
         splash: "assets/images/student.jpg"

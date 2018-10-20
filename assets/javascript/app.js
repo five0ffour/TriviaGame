@@ -72,9 +72,11 @@ $(document).ready(function () {
         if (roundTime <= 0) {
             stopRoundTimer();
 
-            // Log unanswered result
+            // Log unanswered result and mark as a loss
             game.unansweredQuestions++;
+            game.roundResult = false; 
 
+            // Pop up the results display
             hideQuestions();
             showResults();
 
