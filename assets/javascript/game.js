@@ -21,8 +21,7 @@ var game = {
   // ---------------
   resetGame: function () {
     this.questionCounter = 0;
-    this.questionCounter = 0;
-    this.correctAnswer = 0;
+    this.correctAnswers = 0;
     this.incorrectAnswer = 0;
     this.questionsLeft = this.numQuestionsPerGame;
     this.currentQuestion = 0;

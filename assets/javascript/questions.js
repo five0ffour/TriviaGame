@@ -1,9 +1,10 @@
 var questions = [
 
+    /* History */
     {
         id: "1",
         category: "History",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "The first Thanksgiving was celebrated by Native Americans and what other group of people?",
         answers: ["Pilgrims", "Mormons", "Phoenicians", "Millenials"],
         answer: 0,
@@ -13,7 +14,7 @@ var questions = [
     {
         id: "2",
         category: "History",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "From which country did Mexico gain its independence in the 19th century?",
         answers: ["United States", "Aztecs", "Mayans", "Spain"],
         answer: 3,
@@ -23,7 +24,7 @@ var questions = [
     {
         id: "3",
         category: "History",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "Who invented the light bulb in 1879?",
         answers: ["Nicolas Tesla",  "George Westinghouse", "Thomas Edison", "Elon Musk"],
         answer: 2,
@@ -33,7 +34,7 @@ var questions = [
     {
         id: "4",
         category: "History",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "Which language is the mostly widely spoken in South America?",
         answers: ["English", "Portuguese", "Spanish", "French"],
         answer: 1,
@@ -43,7 +44,7 @@ var questions = [
     {
         id: "5",
         category: "History",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "Neil Armstrong and Buzz Aldrin were the first two men in the entire world to do what?",
         answers: ["Sail around the world", "Fly across the Atlantic Ocean", "Split the atom", "Walk on the moon"],
         answer: 3,
@@ -53,7 +54,7 @@ var questions = [
     {
         id: "6",
         category: "History",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "What are the three branches of the United States government?",
         answers: ["Primary, Secondardy and Alternate", "Legal, Management, and Judiciary",  "Legislative, Judicial, and Executive", "Dumb, Dumber and Dumbest"],
         answer: 2,
@@ -63,7 +64,7 @@ var questions = [
     {
         id: "7",
         category: "History",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "Which war was fought between the north and south regions in the United States?",
         answers: ["The US Civil War", "The Revolutionary War",  "The War of 1812", "The French & Indian War"],
         answer: 0,
@@ -73,7 +74,7 @@ var questions = [
     {
         id: "8",
         category: "History",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "Italy, Japan, and Germany’s alliance was called what during WWII?",
         answers: ["The Dark Ages", "The Axis Powers",  "The Reign of Terror", "The Red Scare"],
         answer: 1,
@@ -83,7 +84,7 @@ var questions = [
     {
         id: "9",
         category: "History",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "What city was the first to be attacked by an atomic bomb?",
         answers: ["Berlin", "Tokyo",  "Beijing", "Hiroshima"],
         answer: 3,
@@ -93,7 +94,7 @@ var questions = [
     {
         id: "10",
         category: "History",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "What are the first ten amendments to the United States Constitution called?",
         answers: ["The Bill of Rights", "The Ten Commandments",  "The Articles of Confederacy", "The Declaration of Independence"],
         answer: 0,
@@ -103,7 +104,7 @@ var questions = [
     {
         id: "11",
         category: "History",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "What type of feather, beginning with letter Q, did people write with during the Middle Ages?",
         answers: ["Quiver", "Quill",  "Quarrel", "Quinine"],
         answer: 1,
@@ -113,7 +114,7 @@ var questions = [
     {
         id: "12",
         category: "History",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "Julius Caesar was the emperor of what empire?",
         answers: ["British", "Ottoman",  "Roman", "Persian"],
         answer: 2,
@@ -123,7 +124,7 @@ var questions = [
     {
         id: "13",
         category: "History",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "What is Rosa Parks most famous for?",
         answers: ["Being the first woman to travel into space", "Winning the New York Marathon",  "Walking into a voting booth to vote", "Refusing to give her seat up in the front of the bus."],
         answer: 3,
@@ -133,7 +134,7 @@ var questions = [
     {
         id: "14",
         category: "History",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "The first fireworks were invented in the 7th century in what country?",
         answers: ["China", "England",  "Egypt", "India"],
         answer: 0,
@@ -143,7 +144,7 @@ var questions = [
     {
         id: "15",
         category: "History",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "Name the American president on the half dollar coin who was assassinated in 1963",
         answers: ["Richard M. Nixon", "John F. Kennedy",  "Dwight D. Eisenhower", "Franklin D. Roosevelt"],
         answer: 1,
@@ -153,7 +154,7 @@ var questions = [
     {
         id: "16",
         category: "History",
-        grade: "Fourth Grade",
+        grade: "4th Grade",
         question: "What ancient civilization built the Machu Picchu complex in Peru?",
         answers: ["The Pueblo", "The Aztecs",  "The Incas", "The Mayans"],
         answer: 2,
@@ -163,7 +164,7 @@ var questions = [
     {
         id: "17",
         category: "History",
-        grade: "Fourth Grade",
+        grade: "4th Grade",
         question: "The ancient Egyptian writing system was called what?",
         answers: ["Calligraphy", "Cuneiform",  "Sanskrit", "Hieroglyphics"],
         answer: 3,
@@ -173,7 +174,7 @@ var questions = [
     {
         id: "18",
         category: "History",
-        grade: "Fourth Grade",
+        grade: "4th Grade",
         question: "From whom did the United State buy territory in the Louisiana Purchase?",
         answers: ["Napoleon Bonaparte of France", "Queen Isabella of Spain",  "King George III of England", "Catherine the Great of Russia"],
         answer: 0,
@@ -183,7 +184,7 @@ var questions = [
     {
         id: "19",
         category: "History",
-        grade: "Fourth Grade",
+        grade: "4th Grade",
         question: "Who wrote the national anthem of the United States of America?",
         answers: ["Betsy Ross", "Francis Scott Key",  "George M. Cohen", "Paul McCartney"],
         answer: 1,
@@ -193,7 +194,7 @@ var questions = [
     {
         id: "20",
         category: "History",
-        grade: "Fourth Grade",
+        grade: "4th Grade",
         question: "The Battle of Gettysburg was fought in which war?",
         answers: ["The War of 1812", "The War of the Roses",  "The US Civil War", "World War I"],
         answer: 2,
@@ -203,7 +204,7 @@ var questions = [
     {
         id: "21",
         category: "History",
-        grade: "Fifth Grade",
+        grade: "5th Grade",
         question: "The what was the name of the last Queen of France?",
         answers: ["Catherine of Aragon", "Queen Victoria",  "Queen Latifa", "Marie Antoinette"],
         answer: 3,
@@ -213,7 +214,7 @@ var questions = [
     {
         id: "22",
         category: "History",
-        grade: "Fifth Grade",
+        grade: "5th Grade",
         question: "The region known as the “Fertile Crescent” is located in present day…",
         answers: ["Middle East", "Midwest United States",  "Sub-Saharan Africa", "Argentina"],
         answer: 0,
@@ -223,7 +224,7 @@ var questions = [
     {
         id: "23",
         category: "History",
-        grade: "Fifth Grade",
+        grade: "5th Grade",
         question: "The modern day city of Istanbul was known by what name in the 13th century…",
         answers: ["Ephesus", "Constantinople",  "Babylon", "Alexandria"],
         answer: 1,
@@ -233,7 +234,7 @@ var questions = [
     {
         id: "24",
         category: "History",
-        grade: "Fifth Grade",
+        grade: "5th Grade",
         question: "The French and Indian war, which began in 1754, became the North American theater of this worldwide war that lasted from 1756 to 1763…",
         answers: ["American Revolutionary War", "English Civil War",  "The Seven Years War", "King Philip's War"],
         answer: 2,
@@ -243,19 +244,20 @@ var questions = [
     {
         id: "25",
         category: "History",
-        grade: "Fifth Grade",
+        grade: "5th Grade",
         question: "What year did Hong Kong revert from British rule? ",
         answers: ["1917", "1692",  "1885", "1997"],
         answer: 3,
         splash: "assets/images/hongkong.jpg"
     },
 
+    /* English  */
     {
         id: "26",
         category: "English",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "The plural of “moose” is…",
-        answers: ["moose", "mooses",  "meese", "m&#x00f8;&#x00f8;se"],
+        answers: ["moose", "mooses",  "meese", "bullwinkles"],
         answer: 0,
         splash: "assets/images/student.jpg"
     },
@@ -263,7 +265,7 @@ var questions = [
     {
         id: "27",
         category: "English",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "How many letters are in the English alphabet?",
         answers: ["20", "26",  "28", "50"],
         answer: 1,
@@ -273,7 +275,7 @@ var questions = [
     {
         id: "28",
         category: "English",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "In the story about the boy who cried wolf, what is the lesson?",
         answers: ["If you see something; say something", "Don't procrastinate",  "Always tell the truth", "Kids know best"],
         answer: 2,
@@ -283,7 +285,7 @@ var questions = [
     {
         id: "29",
         category: "English",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "What is the term for a word that is similar in meaning to another word?",
         answers: ["Antonym", "Homonym",  "Simile", "Synonym"],
         answer: 3,
@@ -293,7 +295,7 @@ var questions = [
     {
         id: "30",
         category: "English",
-        grade: "First Grade",
+        grade: "1st Grade",
         question: "What type of words should be capitalized",
         answers: ["proper nouns", "verbs",  "prepositions", "objects"],
         answer: 0,
@@ -303,7 +305,7 @@ var questions = [
     {
         id: "31",
         category: "English",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "What type of literature features magical creatures, such as giants, gnomes, and goblins?",
         answers: ["Biographies", "Fairy Tales",  "Non-fiction", "Fake News"],
         answer: 1,
@@ -313,7 +315,7 @@ var questions = [
     {
         id: "32",
         category: "English",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "Is 'red' an adjective or a noun?",
         answers: ["adjective", "noun",  "both", "neither"],
         answer: 2,
@@ -323,7 +325,7 @@ var questions = [
     {
         id: "33",
         category: "English",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "What is the term for a word that has the opposite meaning of another word?",
         answers: ["Simile", "Homonym",  "Synonym", "Antonym"],
         answer: 3,
@@ -333,7 +335,7 @@ var questions = [
     {
         id: "34",
         category: "English",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "What are the five interrogative or 'question' words?",
         answers: ["Who, what, when, where, why", "left, right, up, down, center",  "north, south, east, west, home", "before, after, during, earlier, later"],
         answer: 0,
@@ -343,7 +345,7 @@ var questions = [
     {
         id: "35",
         category: "English",
-        grade: "Second Grade",
+        grade: "2nd Grade",
         question: "What are the comparative and superlative forms of the word “big?",
         answers: ["Big and bog", "Bigger and biggest",  "Smaller and smallest", "Big and bigly"],
         answer: 1,
@@ -353,7 +355,7 @@ var questions = [
     {
         id: "36",
         category: "English",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "The person in a novel who tells the story from a third-person perspective is called a what?",
         answers: ["the first person", "an author",  " a narrator", "the third person"],
         answer: 2,
@@ -363,7 +365,7 @@ var questions = [
     {
         id: "37",
         category: "English",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "What is the name of the book about a friendship between a pig named Wilbur and spider named Charlotte?",
         answers: ["Little Miss Spider", "Wilbur's Pen",  "Babe", "Chartlotte's Web"],
         answer: 3,
@@ -373,7 +375,7 @@ var questions = [
     {
         id: "38",
         category: "English",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "Who is the author of James and the Giant Peach?",
         answers: ["Dr. Suess", "George RR Martin",  "JK Rowling", "Roald Dahl"],
         answer: 3,
@@ -383,7 +385,7 @@ var questions = [
     {
         id: "39",
         category: "English",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "Adding conjunctions such as “and” or “but” turns a simple sentence into what type of sentence?",
         answers: ["compound sentence", "Declarative statement",  "Interrogative statement", "Prepositional phrase"],
         answer: 0,
@@ -393,97 +395,366 @@ var questions = [
     {
         id: "40",
         category: "English",
-        grade: "Third Grade",
+        grade: "3rd Grade",
         question: "The main series of events in a story is called a what?",
         answers: ["a spoiler", "a plot",  "a theme", "a meme"],
         answer: 1,
         splash: "assets/images/student.jpg"
     },
-/*
 
+    {
+        id: "41",
+        category: "English",
+        grade: "4th Grade",
+        question: "What is the main character in a story called?",
+        answers: ["a hero", "an antagonist",  "a protagonist", "a narrator"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
 
-Fourth Grade
-What is the main character in a story called? A protagonist
+    {
+        id: "42",
+        category: "English",
+        grade: "4th Grade",
+        question: "What is the main character in a story called?",
+        answers: ["a gerund", "an adjective",  "a nound", "an adverb"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
 
-What type of word is “truthfully?” Adverb
+    {
+        id: "43",
+        category: "English",
+        grade: "4th Grade",
+        question: "In the book titled 'The Lion, the Witch, and the Wardrobe', what is the last comma called?",
+        answers: ["an oxford comma", "a bracketing comma",  "a gapping comma", "a joining comma"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
 
-In this book titled The Lion, the Witch, and the Wardrobe, what is the last comma called? The Oxford comma
+    {
+        id: "44",
+        category: "English",
+        grade: "4th Grade",
+        question: "A story that uses animal characters to convey a moral lesson is called a what?",
+        answers: ["an allegory", "a fable",  "a metaphor", "a parable"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
 
-A story conveying a moral lesson is called what? A fable
+    {
+        id: "45",
+        category: "English",
+        grade: "4th Grade",
+        question: "What do you call a group of crows?",
+        answers: ["a flock", "an omen",  "a murder", "a mess"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
 
-What do you call a group of crows? A murder
-Fifth Grade
-Who is the creator of the classic book characters Tom Sawyer and Huckleberry Finn? Mark Twain
+    {
+        id: "46",
+        category: "English",
+        grade: "5th Grade",
+        question: "Who is the creator of the classic book characters Tom Sawyer and Huckleberry Finn?",
+        answers: ["Ray Bradbury", "Edgar Allen Poe",  "Benjamin Franklin", "Mark Twain"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
 
-The words “the,” “an,” and “a,” are known as what in English grammar? Articles
+    {
+        id: "47",
+        category: "English",
+        grade: "5th Grade",
+        question: "The words “the,” “an,” and “a,” are known as what in English grammar?",
+        answers: ["articles", "noun markers",  "prepositions", "adjetives"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
 
-Who is the author of the 1960 novel about social and racial inequality To Kill a Mockingbird? Harper Lee
+    {
+        id: "48",
+        category: "English",
+        grade: "5th Grade",
+        question: "Who is the author of the 1960 novel about social and racial inequality To Kill a Mockingbird?",
+        answers: ["Tom Stoppard", "Harper Lee",  "Kurt Vonnegut", "Ken Kesey"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
 
-Often seen at the end of a sentence, the three trailing dots that indicate the omission from speech or writing of a word or words that are superfluous or able to be understood from contextual clues are known as… Ellipsis
+    {
+        id: "49",
+        category: "English",
+        grade: "5th Grade",
+        question: "Often seen at the end of a sentence, the three trailing dots that indicate the omission words that are superfluous are known as…",
+        answers: ["series", "conjunction",  "ellipses", "emphasis"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
 
-What is the name of the most famous English playwright? William Shakespeare
-*/
+    {
+        id: "50",
+        category: "English",
+        grade: "5th Grade",
+        question: "What is the name of the most famous English playwright?",
+        answers: ["John Lennon", "Samuel Coleridge",  "James Joyce", "William Shakespeare"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    /* Geography  */
+    {
+        id: "50",
+        category: "Georgraphy",
+        grade: "1st Grade",
+        question: "How many continents are there?",
+        answers: ["7", "9",  "11", "5"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "51",
+        category: "Georgraphy",
+        grade: "1st Grade",
+        question: "What country is Paris the capital of?",
+        answers: ["Italy", "France",  "Spain", "England"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "52",
+        category: "Georgraphy",
+        grade: "1st Grade",
+        question: "In which country are the famous Pyramids of Giza? ",
+        answers: ["Morocco", "Lebanon",  "Egypt", "Iraq"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "53",
+        category: "Georgraphy",
+        grade: "1st Grade",
+        question: "In what city is the White House located? ",
+        answers: ["New York City", "Mordor",  "Athens", "Washington, D.C."],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "54",
+        category: "Georgraphy",
+        grade: "1st Grade",
+        question: "How many states are in the United States of America?",
+        answers: ["50", "48",  "58", "13"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "55",
+        category: "Georgraphy",
+        grade: "2nd Grade",
+        question: "Which state is called the Lone Star state?",
+        answers: ["New York", "Texas",  "Alaska", "California"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "56",
+        category: "Georgraphy",
+        grade: "2nd Grade",
+        question: "In what state is the Grand Canyon located?",
+        answers: ["Idaho", "Montana",  "Nevada", "Florida"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "57",
+        category: "Georgraphy",
+        grade: "2nd Grade",
+        question: "What three countries are located in North America?",
+        answers: ["Russia, China and Mongolia", "Honduras, Panama and Venezuala",  "Brazil, Columbia and Peru", "Canada, the United States, and Mexico"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "58",
+        category: "Georgraphy",
+        grade: "2nd Grade",
+        question: "To travel from New York to London, one must fly over what ocean?",
+        answers: ["The Atlantic", "The Pacific",  "The Indian", "The Arctic"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "59",
+        category: "Georgraphy",
+        grade: "2nd Grade",
+        question: "In what country is the famous Taj Mahal located?",
+        answers: ["Iran", "India",  "Cambodia", "China"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "60",
+        category: "Georgraphy",
+        grade: "3rd Grade",
+        question: "What is the longest river in the world?",
+        answers: ["The Yangtze", "The Mississippi",  "The Nile", "The Amazon"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "61",
+        category: "Georgraphy",
+        grade: "3rd Grade",
+        question: "On what continent is the country of Greece located?",
+        answers: ["Europe", "Asia",  "Africa", "The Balkans"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "62",
+        category: "Georgraphy",
+        grade: "3rd Grade",
+        question: "What is the name for a body of land that is completely surrounded by water?",
+        answers: ["a peninsula", "an island",  "an archipeligo", "a continent"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "63",
+        category: "Georgraphy",
+        grade: "3rd Grade",
+        question: "What is the capital of New York?",
+        answers: ["Buffalo", "Saratoga",  "Albany", "New York City"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "64",
+        category: "Georgraphy",
+        grade: "3rd Grade",
+        question: "How many Great Lakes are there in the United States?",
+        answers: ["1", "3",  "5", "4"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "65",
+        category: "Georgraphy",
+        grade: "4th Grade",
+        question: "How many kingdoms are part of the United Kingdom?",
+        answers: ["4", "3",  "5", "1"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "66",
+        category: "Georgraphy",
+        grade: "4th Grade",
+        question: "Which country is the largest in size?",
+        answers: ["Australia", "Russia",  "China", "United States"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "67",
+        category: "Georgraphy",
+        grade: "4th Grade",
+        question: "The United States and Mexico are separated by which river?",
+        answers: ["The Snake River", "Mississippi River",  "The Rio Grande", "The Missouri River"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "68",
+        category: "Georgraphy",
+        grade: "4th Grade",
+        question: "What is the southernmost continent called? ",
+        answers: ["Africa", "Australia",  "South America", "Antarctica"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "69",
+        category: "Georgraphy",
+        grade: "4th Grade",
+        question: "Where is the largest desert in the world located?",
+        answers: ["Central Asia", "North Africa",  "South America", "Austrialia"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "70",
+        category: "Georgraphy",
+        grade: "5th Grade",
+        question: "What is the main language spoken in the Canadian province of Quebec?",
+        answers: ["French", "Canuk",  "English", "Kodiak"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "71",
+        category: "Georgraphy",
+        grade: "5th Grade",
+        question: "Which country is both an island and a continent?",
+        answers: ["Greenland", "Australia",  "Iceland", "Madagascar"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "72",
+        category: "Georgraphy",
+        grade: "5th Grade",
+        question: "What is the name of the sea bordered by Europe to the north and North Africa to the south?",
+        answers: ["The Red Sea", "The Caspian Sea",  "The Mediterranean Sea", "The North Sea"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "73",
+        category: "Georgraphy",
+        grade: "5th Grade",
+        question: "The mountain range that includes Mount Everest is called...",
+        answers: ["The Alps", "The Tetons",  "The Urals", "The Himalayas"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "74",
+        category: "Georgraphy",
+        grade: "5th Grade",
+        question: "Imaginary lines traversing the globe from pole to pole are called…",
+        answers: ["Meridians", "Latitudes",  "Tropics", "Vectors"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    }
 ];
 
 /*
-
-Geography
-First Grade
-How many continents are there? 7
-
-What country is Paris the capital of? France
-
-In which country are the famous Pyramids of Giza? Egypt
-
-In what city is the White House located? Washington D.C.
-
-How many states are in the United States of America? 50
-
-Second Grade
-Which state is called the Lone Star state? Texas
-
-In what state is the Grand Canyon located? Nevada
-
-What three countries are located in North America? Canada, the United States, and Mexico
-
-To travel from New York to London, one must fly over what ocean? The Atlantic Ocean
-
-In what country is the famous Taj Mahal located? India
-
-Third Grade
-What is the longest river in the world? The Amazon
-
-On what continent is the country of Greece located? Europe
-
-What is the name for a body of land that is completely surrounded by water? An island.
-
-What is the capital of New York? Albany
-
-How many Great Lakes are there in the United States? 4: Michigan-Huron, Superior, Ontario, and Erie
-
-Fourth Grade
-Where is the largest desert in the world located? Northern Africa
-
-How many kingdoms are part of the United Kingdom? 4: England, Northern Ireland, Scotland and Wales
-
-Which country is the largest in size? Russia
-
-The United States and Mexico are separated by which river? The Rio Grande
-
-What is the southernmost continent called? Antarctica
-
-Fifth Grade
-What is the main language spoken in the Canadian province of Quebec? French
-
-Which country is both an island and a continent? Australia
-
-What is the name of the sea bordered by Europe to the north and North Africa to the south? The Mediterranean Sea
-
-The mountain range that includes Mount Everest is called...The Himalayas
-
-Imaginary lines traversing the globe from pole to pole are called… Meridians
-
-
 The Sciences
 First Grade
 What causes tides? The moon

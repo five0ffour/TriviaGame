@@ -144,12 +144,18 @@ $(document).ready(function () {
     //-----------------------------
     function showQuestions() {
 
+        var currQuestion = questions[game.currentQuestion];
+
+        // show the category and grade level of the question
+        $("#trivia-category").text("Subject: " + currQuestion.category);
+        $("#trivia-grade").text("Class: " + currQuestion.grade);
+
         // update the display with the question and possible answers
-        $("#trivia-question").text(questions[game.currentQuestion].question);
-        $("#answer-txt-1").text(questions[game.currentQuestion].answers[0]);
-        $("#answer-txt-2").text(questions[game.currentQuestion].answers[1]);
-        $("#answer-txt-3").text(questions[game.currentQuestion].answers[2]);
-        $("#answer-txt-4").text(questions[game.currentQuestion].answers[3]);
+        $("#trivia-question").text(currQuestion.question);
+        $("#answer-txt-1").text(currQuestion.answers[0]);
+        $("#answer-txt-2").text(currQuestion.answers[1]);
+        $("#answer-txt-3").text(currQuestion.answers[2]);
+        $("#answer-txt-4").text(currQuestion.answers[3]);
         
         // Display the questions & answer cards
         $("#question-card").show();
