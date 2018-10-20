@@ -90,9 +90,16 @@ p {
     clear: both;
 }
 
+#start-card {
+    text-align: center;
+}
+
 #btn-start {
     text-align: center;
     clear: left;
+    font-size: 2em;
+    padding: 1em;
+    border-radius: 1em;
 }
 
 #question-card {
@@ -131,7 +138,7 @@ p {
 #btn-answer-C,
 #btn-answer-D {
     clear: both;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     padding: 2px;
     margin: 5px;

@@ -55,7 +55,7 @@ var questions = [
         category: "History",
         grade: "Second Grade",
         question: "What are the three branches of the United States government?",
-        answers: ["Primary, Secondardy and Alternate", "Legal, Management, and Judiciary",  "Legislative, Judicial, and Executive", "Dumb, Dumb and Dumber"],
+        answers: ["Primary, Secondardy and Alternate", "Legal, Management, and Judiciary",  "Legislative, Judicial, and Executive", "Dumb, Dumber and Dumbest"],
         answer: 2,
         splash: "assets/images/usagov.png"
     },
