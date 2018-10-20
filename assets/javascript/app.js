@@ -73,6 +73,7 @@ $(document).ready(function () {
             // Log unanswered result
             game.unansweredQuestions++;
 
+            hideQuestions();
             showResults();
 
             // Start a delay timer and wait between rounds
@@ -128,7 +129,7 @@ $(document).ready(function () {
         // $("#answer-card").addClass("invisible");
         $("#question-card").hide();
         $("#answer-card").hide();
-        $(".page").hide();
+        $(".desktop").hide();
     }
 
     //-----------------------------
@@ -149,7 +150,7 @@ $(document).ready(function () {
         // $("#answer-card").removeClass("invisible");
         $("#question-card").show();
         $("#answer-card").show();
-        $(".page").show();
+        $(".desktop").show();
 
     }
 
@@ -185,8 +186,8 @@ $(document).ready(function () {
             var answerIdx = game.getCorrectAnswer();
             $("#results-card").css("border-color", "red");
             $("#results-title").text("Sorry, Incorrect!");
-            $("#results-text").text("It was " +
-                                     String.fromCharCode(answerIdx + 65) + ": '" +
+            $("#results-text").text("It was '" +
+                                     String.fromCharCode(answerIdx + 65) + "' - '" +
                                      questions[game.currentQuestion].answers[answerIdx] + "'");
         }
 
@@ -212,7 +213,7 @@ $(document).ready(function () {
 
         // Hide the start button
         // or use css("display:none") or jQuery.hide()
-        $("#start-card").addClass("invisible");
+        $("#start-card").hide();
 
         playNextRound();
       
@@ -226,7 +227,7 @@ $(document).ready(function () {
         // Get the question category selected
         var category = $(this).val();
 
-        // Update the question category here -- see loadQuestion()
+        // TBD - Update the question category here -- see loadQuestion()
     });
 
     //------------------------------------------
@@ -237,7 +238,7 @@ $(document).ready(function () {
         // Get the difficulty selected
         var grade = $(this).val();
 
-        // Update the game difficulty level here -- see loadQuestion()
+        // TBD - Update the game difficulty level here -- see loadQuestion()
     });
 
     //------------------------------------------
@@ -269,10 +270,6 @@ $(document).ready(function () {
         // convert letter to numeric array index and set game state
         var num = answer.charCodeAt() - 65;
         game.validateAnswer(num);
-
-        // highlight their answer
-
-        // highlight the correct answer 
 
         // Hide the questions and show the results
         hideQuestions();

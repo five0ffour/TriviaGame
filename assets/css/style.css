@@ -9,29 +9,36 @@ p {
     padding: 0.5em;
 }
 
-/* fonts */
+/*--------*/
+/* Fonts  */
+/*--------*/
 @font-face {
     font-family: 'DK Crayon Crumble';
     src: url(../fonts/DK\ Crayon\ Crumble.ttf);
  }
 
+ /*------------------------------------------*/
  /* Main content section - added drop shadow */
-.page { 
+ /*------------------------------------------*/
+ .desktop { 
     position:  relative;
     top: 60px;
 
-    background-color: #ffffff;
     border-color: #000000;
+    background: #777777;
 
     box-shadow: 5px 5px 4px #000000;
     border-radius: 10px;
     width: 80%;
-    height: 400px;
+    height: 412px;
     margin: 20px auto;
     overflow: auto;
 }
- 
-/* Banner */
+
+/*----------------*/
+/* Title & Banner */
+/*----------------*/
+
 .nav {
     margin: 2px;
 }
@@ -52,26 +59,114 @@ p {
     margin: 2px;
 }
 
-/* content in the page's section */
+/* content in the desktop's section */
 .content {
     padding: 0 10px 10px 10px;
 }
 
+/*-------------------*/
+/* Trivia Categories */
+/*-------------------*/
+
+#category-hdr {       
+}
+
+#trivia-category,
+#trivia-grade,
+#trivia-countdown {
+    font-size: 1.5em;
+    font-family: 'Schoolbell', cursive;
+    width: 95%;
+    text-align: right;
+    line-height: 0.5em;
+    color: #000000;
+}
+
+#trivia-countdown {
+    color: red;
+}}
+
+#trivia-hdr {
+    clear: both;
+}
+
+#btn-start {
+    text-align: center;
+    clear: left;
+}
+
+#question-card {
+    padding: 2em;
+    border-bottom: 5px;
+    border-color: #000000;
+}
+
+#trivia-question {
+    font-size: 2em;
+    text-align: center;
+    color: blue;
+    font-family: 'Schoolbell', cursive;
+}
+
+#trivia-card {
+}
+
+/*--------------------------*/
+/* Answer Buttons & Prompts */
+/*--------------------------*/
+
+#answer-card {
+    height: 4em;
+    position: relative;
+    bottom: 0;
+}
+
+.answer-col {
+    width: 80%;
+    margin: 10px;
+}
+
+#btn-answer-A,
+#btn-answer-B,
+#btn-answer-C,
+#btn-answer-D {
+    clear: both;
+    font-size: 1.5em;
+    text-align: center;
+    padding: 2px;
+    margin: 5px;
+}
+
+#answer-txt-1,
+#answer-txt-2,
+#answer-txt-3,
+#answer-txt-4 {
+    font-size: 1.5em;
+    text-align: left;
+    color: blue;
+    line-height: 1.5em;
+    font-family: 'Schoolbell', cursive;
+}
+
+/*------------------------------*/
 /* ------ Results Card -------- */
+/*------------------------------*/
+
 #results-card {
-    position: fixed; /* forces the element to stay fixed in relation to the viewport */
-    top: 25%; /* sets the top of the image 50% of the page height */
-    left: 50%; /* sets the left side of the image 50% across the page */
-    margin-left: -200px; /* moves the image half of its own width to the left-side of the page */
-    margin-top: -93px; /* moves the image half its height 'up' the page */
+    position: fixed;        /* forces the element to stay fixed in relation to the viewport */
+    top: 25%;               /* sets the top of the image 25% of the desktop height */
+    left: 50%;              /* sets the left side of the image 50% across the desktop */
+    margin-left: -200px;    /* moves the image half of its own width to the left-side of the desktop */
+    margin-top: -53px;      /* moves the image quarter of its height 'up' the desktop */
     margin-bottom: auto;
     max-width: 400px;
     border: solid 5px green;
 
-    overflow:hiden;
+    overflow:hidden;
 
     box-shadow: 0.5em 0.5em 0.7em #333; /* to give the illusion of 'floating' */
     border-radius: 1em;
+    background-color: #777777;
 }
 
 #results-img {

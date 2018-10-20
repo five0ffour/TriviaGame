@@ -23,13 +23,20 @@
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-
+    
     <!-- External CSS Stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Schoolbell" rel="stylesheet">
+
+    <!-- Button Style -->
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Local CSS Stylesheets -->
     <!-- <link rel="stylesheet" type="text/css" media="screen" href="assets/css/reset.css" /> -->
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/paper.css" />
 
     <!-- Javascript -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
@@ -41,41 +48,55 @@
         <!-- Title Splash -->
         <div class="nav">
             <h1 id="title">Don't Know Much About History</h1>
-            <h2 id="subtitle">A trivia game to remind you of all the things you've forgotten</h2>
+            <h2 id="subtitle">Trivia to remind you of all the things you've forgotten from school</h2>
         </div>
     </header>
 
     <!-- Banner & Navigation -->
-    <div class="page">
-        <div class="content">
+    <div class="desktop">
+        <div class="content paper">
+
+            <article class="head">
+                <div id="category-hdr">
+                    <p id="trivia-category" value="0">Subject: History</p>
+                    <p id="trivia-grade" value="0">Class: 1st Grade</p>
+                    <p id="trivia-countdown">00:00</span>
+                </div>
+            </article>
 
             <!-- Trivia Game Configuration Row -->
-            <div id="category-hdr">
-                <div id="trivia-category" value="0">History</div>
-                <div id="trivia-grade" value="0">1st Grade</div>
-                <div id="trivia-countdown">00:00</div>
-            </div>
 
             <!-- Start Button Row (hidden once game starts) -->
-            <button id="btn-start">Start!</button>
+            <div id="start-card">
+                <button id="btn-start">Start!</button>
+            </div>
 
             <!-- Trivia Question Card (hidden before game start)-->
             <div id="question-card" style="display:none">
                 <div id="trivia-question">None</div>
-                <hr class="my-4">
             </div>
 
 
             <!-- Trivia Answer Cards (hidden before game start) -->
             <div id="answer-card" style="display:none">
-                <button id="btn-answer-A" class="answer-button" value="A">A</button>
-                <span id="answer-txt-1" class="trivia-answer"></span>
-                <button id="btn-answer-B" class="answer-button" value="B">B</button>
-                <span id="answer-txt-2" class="trivia-answer"></span>
-                <button id="btn-answer-C" class="answer-button" value="C">C</button>
-                <span id="answer-txt-3" class="trivia-answer"></span>
-                <button id="btn-answer-D" class="answer-button" value="D">D</button>
-                <span id="answer-txt-4" class="trivia-answer"></span>
+                <div class="answer-col">
+                    <div>
+                        <button id="btn-answer-A" class="answer-button w3-btn w3-green" value="A">A</button>
+                        <span id="answer-txt-1" class="trivia-answer"></span>
+                    </div>
+                    <div>
+                        <button id="btn-answer-B" class="answer-button w3-btn w3-green" value="B">B</button>
+                        <span id="answer-txt-2" class="trivia-answer"></span>
+                    </div>
+                    <div>
+                        <button id="btn-answer-C" class="answer-button w3-btn w3-green" value="C">C</button>
+                        <span id="answer-txt-3" class="trivia-answer"></span>
+                    </div>
+                    <div>
+                        <button id="btn-answer-D" class="answer-button w3-btn w3-green" value="D">D</button>
+                        <span id="answer-txt-4" class="trivia-answer"></span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
