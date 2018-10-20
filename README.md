@@ -39,11 +39,11 @@ jQuery 3.3.1 - JavaScript library
 Michael Galarneau - Initial work - Five0fFour
 
 ## Acknowledgements
-reset css: http://meyerweb.com/eric/tools/css/reset/ 
-wallpaper:  https://www.deviantart.com/blueamnesiac/art/Chalk-Board-Texture-270753502
-images:  https://www.wikipedia.org
-title font: https://www.dafont.com/dk-crayon-crumble.font
-paper font: https://fonts.google.com/specimen/Schoolbell
-paper effect: https://www.techrepublic.com/blog/web-designer/how-to-get-the-ruled-paper-background-effect-with-css3/
-favicon: https://www.freefavicon.com/freefavicons/icons/iconinfo/pencil-icon-152-190958.html
-questions:  https://wehavekids.com/education/are-you-smarter-than-a-fifth-grader-questions
+reset css: http://meyerweb.com/eric/tools/css/reset/  
+wallpaper:  https://www.deviantart.com/blueamnesiac/art/Chalk-Board-Texture-270753502  
+images:  https://www.wikipedia.org  
+title font: https://www.dafont.com/dk-crayon-crumble.font  
+paper font: https://fonts.google.com/specimen/Schoolbell  
+paper effect: https://www.techrepublic.com/blog/web-designer/how-to-get-the-ruled-paper-background-effect-with-css3/  
+favicon: https://www.freefavicon.com/freefavicons/icons/iconinfo/pencil-icon-152-190958.html  
+questions:  https://wehavekids.com/education/are-you-smarter-than-a-fifth-grader-questions  
