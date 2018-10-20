@@ -23,7 +23,7 @@
 
     <!-- Favicon -->
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" />
-    
+
     <!-- External CSS Stylesheets -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -111,6 +111,15 @@
         <h5 id="results-title" class="card-title">None</h5>
         <img id="results-img" class="card-img" src="" alt="Results image">
         <p id="results-text" class="card-text">Your answer here</p>
+    </div>
+
+    <!-- Final Score Card  -->
+    <div id="score-card" style="display:none">
+        <h5 id="score-title" class="card-title">You got <span id="numCorrect">0</span> out of <span id="numQuestions">10</span>
+            correct</h5>
+        <p>Your final grade is...</p>
+        <p id="score-grade" class="card-text">A+</p>
+        <button id="btn-restart" class="w3-button w3-green">Play again?</button>
     </div>
 
 </body>

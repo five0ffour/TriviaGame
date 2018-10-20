@@ -295,7 +295,7 @@ var questions = [
         category: "English",
         grade: "First Grade",
         question: "What type of words should be capitalized",
-        answers: ["Proper nouns", "verbs",  "prepositions", "objects"],
+        answers: ["proper nouns", "verbs",  "prepositions", "objects"],
         answer: 0,
         splash: "assets/images/student.jpg"
     },

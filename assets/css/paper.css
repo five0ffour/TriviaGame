@@ -1,6 +1,8 @@
+/* CSS Document */
+/* Stylings necessary to produce the white ruled paper look */
+
 @charset "utf-8";
 
-/* CSS Document */
 .paper {
         font: normal 12px/1.5 "Lucida Grande", arial, sans-serif;
         margin: 0 auto;

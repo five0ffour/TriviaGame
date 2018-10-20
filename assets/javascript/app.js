@@ -1,3 +1,5 @@
+/* app.js - holds all of the screen interaction logic and event handlers. (jQuery)  */
+/*        - typically references the game object to manage the actual game state    */
 $(document).ready(function () {
 
     /* Global game Timers */
@@ -100,7 +102,9 @@ $(document).ready(function () {
     }
 
     //---------------------
-    // updateWaitTimer() - does nothing to give user a chance to rest and kicks off the next round at the end
+    // updateWaitTimer() - pauses to user a chance to rest and kicks off the next round at the end
+    //                   - only kicks off next round if we're in the middle of the game, otherwise it
+    //                     kicks off the final score (and resart)
     //----------------------
     function updateWaitTimer() {
 
@@ -113,8 +117,14 @@ $(document).ready(function () {
 
             hideResults();
 
-            // Load the next question
-            playNextRound();
+            // Load the next question if applicable
+            if (game.questionsLeft > 0)
+                // Game continues,  load up the next quesiton
+                playNextRound();
+            else {
+                // Game over, pop up the final score
+                showFinalScore();
+            }
         }
     }
 
@@ -124,9 +134,6 @@ $(document).ready(function () {
     function hideQuestions() {
 
         // Hide the questions & answer cards
-        // or use css("display:block") or jQuery.hide()
-        // $("#question-card").addClass("invisible");
-        // $("#answer-card").addClass("invisible");
         $("#question-card").hide();
         $("#answer-card").hide();
         $(".desktop").hide();
@@ -145,9 +152,6 @@ $(document).ready(function () {
         $("#answer-txt-4").text(questions[game.currentQuestion].answers[3]);
         
         // Display the questions & answer cards
-        // or use css("display:block") or jQuery.hide()
-        // $("#question-card").removeClass("invisible");
-        // $("#answer-card").removeClass("invisible");
         $("#question-card").show();
         $("#answer-card").show();
         $(".desktop").show();
@@ -159,9 +163,7 @@ $(document).ready(function () {
     //-----------------------------
     function hideResults() {
 
-        // Display the questions & answer cards
-        // or use css("display:block") or jQuery.hide()
-        // $("#results-card").addClass("invisible");
+        // Hide the results cards
         $("#results-card").hide();
     }
 
@@ -191,10 +193,30 @@ $(document).ready(function () {
                                      questions[game.currentQuestion].answers[answerIdx] + "'");
         }
 
-        // Display the questions & answer cards
-        // or use css("display:block") or jQuery.hide()
-        // $("#results-card").removeClass("invisible");
+        // Show the reults cards
         $("#results-card").show();
+    }
+
+    //-----------------------------
+    // hideFinalScore() -  hide the final score pane out of view
+    //-----------------------------
+    function hideFinalScore() {
+
+        // Hide the score  card
+        $("#score-card").hide();
+    }
+
+    // showFinalScore() - updates the display with the end of game stats
+    function showFinalScore() {
+
+        // Update the score stats
+        $("#numCorrect").text(game.correctAnswers);
+        $("#numQuestions").text(game.numQuestionsPerGame);
+
+        $("#score-grade").text(game.getLetterGrade());
+
+        // Display the score card
+        $("#score-card").show();
     }
 
     /********************** */
@@ -218,6 +240,24 @@ $(document).ready(function () {
         playNextRound();
       
     });
+
+    //------------------------------------------
+    // onRestartClick() - Game start click event 
+    //                  - hides start button and displays questions/answer card
+    //                  - kicks off the first question
+    //------------------------------------------
+    $("#btn-restart").on("click", function () {
+
+        // Initialize the game 
+        game.resetGame();
+
+        // Hide the score cards
+        $("#score-card").hide();
+
+        playNextRound();
+      
+    });
+
 
     //------------------------------------------
     // OnCategoryClick() - Trivia question category selector -- see loadQuestion()

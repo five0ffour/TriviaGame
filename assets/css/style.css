@@ -1,4 +1,6 @@
-/* ------ Main defaults -------- */
+/* CSS Document */
+
+/* ------ Main page defaults -------- */
 body,
 html {
     background:  url(../images/chalkboard.png);
@@ -203,4 +205,49 @@ p {
     color: #ffffff;
     font-size: 1.5em;
     margin: 2px;
+}
+
+
+/*----------------------------*/
+/* ------ Score Card -------- */
+/*----------------------------*/
+
+#score-card {
+    position: fixed;        /* forces the element to stay fixed in relation to the viewport */
+    top: 25%;               /* sets the top of the image 25% of the desktop height */
+    left: 50%;              /* sets the left side of the image 50% across the desktop */
+    margin-left: -200px;    /* moves the image half of its own width to the left-side of the desktop */
+    margin-top: -53px;      /* moves the image quarter of its height 'up' the desktop */
+    margin-bottom: auto;
+    max-width: 400px;
+    border: solid 5px green;
+    text-align: center;
+
+    overflow:hidden;
+
+    box-shadow: 0.5em 0.5em 0.7em #333; /* to give the illusion of 'floating' */
+    border-radius: 1em;
+    background-color: #ffffff;
+}
+
+#score-title {
+    font-family: 'DK Crayon Crumble';
+    color: blue;
+    font-size: 1.5em;
+    text-align: center;
+    margin: 2px;
+    padding: 1em;
+}
+
+#score-grade {
+    font-family: 'DK Crayon Crumble';
+    text-align: center;
+    color: red;
+    font-size: 2em;
+    margin: 2px;
+}
+
+#btn-restart {
+    text-align: center;
+    margin: 10px;
 }

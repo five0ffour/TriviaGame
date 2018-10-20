@@ -1,12 +1,13 @@
 var game = {
-  numQuestionsPerGame: 10,  // number of questions in a game
+  numQuestionsPerGame: 5,  // number of questions in a game
+  questionCounter: 0,       // number of questions asked
+  questionsLeft: this.numQuestionsPerGame, // number of questions left to ask in the current game
 
   correctAnswers: 0,        // how many they got right
   incorrectAnswers: 0,      // how many they got wrong
   unansweredQuestions: 0,   // how many they let timeout
 
-  questionsLeft: this.numQuestionsPerGame, // number of questions left to ask in the current game
-  currentQuestion: 0,       // current questions on the board
+  currentQuestion: 0,       // index of current questions on the board
   questionsAsked: [],       // index of the questions already asked (to avoid duplicates)
 
   categoryChoice: 0,        // category to use to source questions 
@@ -19,6 +20,8 @@ var game = {
   // resetGame() -- clear the board and to get ready for a new game
   // ---------------
   resetGame: function () {
+    this.questionCounter = 0;
+    this.questionCounter = 0;
     this.correctAnswer = 0;
     this.incorrectAnswer = 0;
     this.questionsLeft = this.numQuestionsPerGame;
@@ -27,7 +30,6 @@ var game = {
     this.answerGiven = false;
     this.roundResult = false;
 
-    // clear the board -- this belongs in the display handler, not in this model object
     $("#trivia-question, #answer-txt-1, #answer-txt-2, #answer-txt-2, #answer-txt-4").empty();
   },
 
@@ -36,7 +38,6 @@ var game = {
   //-------------------
   generateRandomNum: function (low, high) {
     var num = (Math.floor(Math.random() * (high - low + 1) + low));
-    // console.log("game.generateRandomNum() - The randomly selected num between " + low + " and " + high + " is: \"" + num + "\"");
     return num;
   },
 
@@ -66,6 +67,8 @@ var game = {
     // Save the quesion as the current one for this round
     // Hold a copy in an array buffer so we don't choose it again
     this.currentQuestion = num;
+    this.questionCounter++;
+    this.questionsLeft--;
     this.questionsAsked.push(num);
 
     console.log("game.loadQuestion() - random question selected is " + this.currentQuestion);
@@ -104,5 +107,39 @@ var game = {
   //-------------------------
   getCorrectAnswer : function() {
     return questions[this.currentQuestion].answer;
+  },
+
+  getLetterGrade : function() {
+    let score = this.correctAnswers / this.numQuestionsPerGame * 100;
+    let letterGrade = "";
+
+    if (score >= 97)
+        letterGrade = "A+";
+    else if (score >= 93)
+        letterGrade = "A";
+    else if (score >= 90)
+        letterGrade = "A-";
+    else if (score >= 87)
+        letterGrade = "B+";
+    else if (score >= 83)
+        letterGrade = "B";
+    else if (score >= 80)
+        letterGrade = "B-";
+    else if (score >= 77)
+        letterGrade = "C+";
+    else if (score >= 73)
+        letterGrade = "C";
+    else if (score >= 70)
+        letterGrade = "C-";
+    else if (score >= 67)
+        letterGrade = "D+";
+    else if (score >= 63)
+        letterGrade = "D";
+    else if (score >= 60)
+        letterGrade = "C-";
+    else 
+        letterGrade = "F";
+
+    return letterGrade;
   }
 }
