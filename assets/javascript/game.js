@@ -1,5 +1,7 @@
+/* game.js - the state management of any given game                  */
+/*      - called by the app controller, calls the question object    */
 var game = {
-  numQuestionsPerGame: 5,  // number of questions in a game
+  numQuestionsPerGame: 10,  // number of questions in a game
   questionCounter: 0,       // number of questions asked
   questionsLeft: this.numQuestionsPerGame, // number of questions left to ask in the current game
 

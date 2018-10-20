@@ -1,3 +1,5 @@
+/* questions.js -  our game database of questions and answers*/
+
 var questions = [
 
     /* History */
