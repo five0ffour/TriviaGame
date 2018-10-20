@@ -249,45 +249,158 @@ var questions = [
         answer: 3,
         splash: "assets/images/hongkong.jpg"
     },
-     
-];
 
+    {
+        id: "26",
+        category: "English",
+        grade: "First Grade",
+        question: "The plural of “moose” is…",
+        answers: ["moose", "mooses",  "meese", "m&#x00f8;&#x00f8;se"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
 
-/* 
+    {
+        id: "27",
+        category: "English",
+        grade: "First Grade",
+        question: "How many letters are in the English alphabet?",
+        answers: ["20", "26",  "28", "50"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
 
-English and Literature
-First Grade
-The plural of “moose” is… Moose
+    {
+        id: "28",
+        category: "English",
+        grade: "First Grade",
+        question: "In the story about the boy who cried wolf, what is the lesson?",
+        answers: ["If you see something; say something", "Don't procrastinate",  "Always tell the truth", "Kids know best"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
 
-How many letters are in the English alphabet? 26
+    {
+        id: "29",
+        category: "English",
+        grade: "First Grade",
+        question: "What is the term for a word that is similar in meaning to another word?",
+        answers: ["Antonym", "Homonym",  "Simile", "Synonym"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
 
-In the story about the boy who cried wolf, what is the lesson? Always tell the truth
+    {
+        id: "30",
+        category: "English",
+        grade: "First Grade",
+        question: "What type of words should be capitalized",
+        answers: ["Proper nouns", "verbs",  "prepositions", "objects"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
 
-What is the term for a word that is similar in meaning to another word? Synonym
+    {
+        id: "31",
+        category: "English",
+        grade: "Second Grade",
+        question: "What type of literature features magical creatures, such as giants, gnomes, and goblins?",
+        answers: ["Biographies", "Fairy Tales",  "Non-fiction", "Fake News"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
 
-What type of words should be capitalized? Proper nouns
+    {
+        id: "32",
+        category: "English",
+        grade: "Second Grade",
+        question: "Is 'red' an adjective or a noun?",
+        answers: ["adjective", "noun",  "both", "neither"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
 
-Second Grade
-What type of literature features magical creatures, such as giants, gnomes, and goblins? Fairy Tales
+    {
+        id: "33",
+        category: "English",
+        grade: "Second Grade",
+        question: "What is the term for a word that has the opposite meaning of another word?",
+        answers: ["Simile", "Homonym",  "Synonym", "Antonym"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
 
-Is “red” an adjective or a noun? Both
+    {
+        id: "34",
+        category: "English",
+        grade: "Second Grade",
+        question: "What are the five interrogative or 'question' words?",
+        answers: ["Who, what, when, where, why", "left, right, up, down, center",  "north, south, east, west, home", "before, after, during, earlier, later"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
 
-What is the term for a word that has the opposite meaning of another word? Antonym
+    {
+        id: "35",
+        category: "English",
+        grade: "Second Grade",
+        question: "What are the comparative and superlative forms of the word “big?",
+        answers: ["Big and bog", "Bigger and biggest",  "Smaller and smallest", "Big and bigly"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
 
-What are the five interrogative or "question" words? Who, what, when, where, why
+    {
+        id: "36",
+        category: "English",
+        grade: "Third Grade",
+        question: "The person in a novel who tells the story from a third-person perspective is called a what?",
+        answers: ["the first person", "an author",  " a narrator", "the third person"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
 
-What are the comparative and superlative forms of the word “big?” Bigger and biggest
+    {
+        id: "37",
+        category: "English",
+        grade: "Third Grade",
+        question: "What is the name of the book about a friendship between a pig named Wilbur and spider named Charlotte?",
+        answers: ["Little Miss Spider", "Wilbur's Pen",  "Babe", "Chartlotte's Web"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
 
-Third Grade
-The person in a novel who tells the story from a third-person perspective is called a what? A narrator
+    {
+        id: "38",
+        category: "English",
+        grade: "Third Grade",
+        question: "Who is the author of James and the Giant Peach?",
+        answers: ["Dr. Suess", "George RR Martin",  "JK Rowling", "Roald Dahl"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
 
-What is the name of the book about a friendship between a pig named Wilbur and spider named Charlotte? Charlotte’s Web
+    {
+        id: "39",
+        category: "English",
+        grade: "Third Grade",
+        question: "Adding conjunctions such as “and” or “but” turns a simple sentence into what type of sentence?",
+        answers: ["compound sentence", "Declarative statement",  "Interrogative statement", "Prepositional phrase"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
 
-Adding conjunctions such as “and” or “but” turns a simple sentence into what type of sentence? Compound sentence
+    {
+        id: "40",
+        category: "English",
+        grade: "Third Grade",
+        question: "The main series of events in a story is called a what?",
+        answers: ["a spoiler", "a plot",  "a theme", "a meme"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+/*
 
-Who is the author of James and the Giant Peach? Roald Dahl
-
-The main series of events in a story is called a what? A plot
 
 Fourth Grade
 What is the main character in a story called? A protagonist
@@ -309,7 +422,10 @@ Who is the author of the 1960 novel about social and racial inequality To Kill a
 Often seen at the end of a sentence, the three trailing dots that indicate the omission from speech or writing of a word or words that are superfluous or able to be understood from contextual clues are known as… Ellipsis
 
 What is the name of the most famous English playwright? William Shakespeare
+*/
+];
 
+/*
 
 Geography
 First Grade

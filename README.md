@@ -7,3 +7,4 @@ images:  https://www.wikipedia.org
 title font: https://www.dafont.com/dk-crayon-crumble.font
 paper font: https://fonts.google.com/specimen/Schoolbell
 paper effect: https://www.techrepublic.com/blog/web-designer/how-to-get-the-ruled-paper-background-effect-with-css3/
+favicon: https://www.freefavicon.com/freefavicons/icons/iconinfo/pencil-icon-152-190958.html
