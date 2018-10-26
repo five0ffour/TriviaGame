@@ -1520,9 +1520,9 @@ var questions = [
 
     {
         id: "151",
-        category: "Mind teaser",
+        category: "Brain teaser",
         grade: "Any",
-        question: "A hunter heads out of camp due south one mile in search of bear, sees one and tracks it due east for one mile, shoots, misses it and returns to camp heading due north one mile.  What color was the bear?",
+        question: "A hunter heads out of camp heading due south one mile in search of bear, sees one and tracks it due east for one mile, shoots, misses it and returns to camp heading due north one mile.  What color was the bear?",
         answers: [ "brown", "black", "white", "wait, what???"],
         answer: 2,
         splash: "assets/images/student.jpg"
