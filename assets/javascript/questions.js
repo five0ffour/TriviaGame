@@ -753,65 +753,272 @@ var questions = [
         answers: ["Meridians", "Latitudes",  "Tropics", "Vectors"],
         answer: 0,
         splash: "assets/images/student.jpg"
+    },
+
+    /* Science */
+    {
+        id: "75",
+        category: "Science",
+        grade: "1st Grade",
+        question: "What causes tides?",
+        answers: ["the sun", "the moon",  "the weather", "the wind"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "76",
+        category: "Science",
+        grade: "1st Grade",
+        question: "The south pole of the magnet and the north pole of another magnet will do what?",
+        answers: ["do nothing", "push apart",  "stick together", "snapchat"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "77",
+        category: "Science",
+        grade: "1st Grade",
+        question: "What is the force that causes objects to fall to the ground?",
+        answers: ["Chemistry", "Magnetism",  "Slapstick Comedy", "Gravity"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "78",
+        category: "Science",
+        grade: "1st Grade",
+        question: "A caterpillar changes and grows into a what?",
+        answers: ["Butterfly", "Earthworm",  "Spider", "Grasshopper"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "79",
+        category: "Science",
+        grade: "1st Grade",
+        question: "What is the biggest organ in the human body?",
+        answers: ["Heart", "Liver",  "Lung", "Kidney"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "80",
+        category: "Science",
+        grade: "2nd Grade",
+        question: "What is H2O also known as?",
+        answers: ["oxygen", "sugar",  "water", "soda"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "81",
+        category: "Science",
+        grade: "2nd Grade",
+        question: "What gas is in the air we breathe?",
+        answers: ["helium", "chlorine",  "passed", "oxygen"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "82",
+        category: "Science",
+        grade: "2nd Grade",
+        question: "What gas do plants breathe in that humans and animals breathe out?",
+        answers: ["carbon dioxide", "chlorophyl",  "oxygen", "sunshine"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "83",
+        category: "Science",
+        grade: "2nd Grade",
+        question: "Earth is located in what galaxy?",
+        answers: ["Andromeda", "Milky Way",  "Pinwheel", "far far away"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "84",
+        category: "Science",
+        grade: "2nd Grade",
+        question: "Bats are mammals.",
+        answers: ["only at night", "false",  "true", "only in human form"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "85",
+        category: "Science",
+        grade: "3rd Grade",
+        question: "What phenomenon might be felt on the surface when two tectonic plates rub against each other?",
+        answers: ["Hammer time", "Hurricane",  "Tornado", "Earthquake"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "86",
+        category: "Science",
+        grade: "3rd Grade",
+        question: "The hardest naturally occurring mineral is… ",
+        answers: ["Diamond", "Quartz",  "Granite", "Final Exams"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "87",
+        category: "Science",
+        grade: "3rd Grade",
+        question: "What is the closest planet to the sun?",
+        answers: ["Venus", "Mercury",  "Mars", "Earth"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "88",
+        category: "Science",
+        grade: "3rd Grade",
+        question: "The process by which plants eat and make energy is called…",
+        answers: ["Mitosis", "Osmosis",  "Photosyntheis", "Fusion"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "89",
+        category: "Science",
+        grade: "3rd Grade",
+        question: "Does the sun orbit the Earth?",
+        answers: ["it orbits the moon", "it orbits Hollywood actors",  "yes", "no"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "90",
+        category: "Science",
+        grade: "4th Grade",
+        question: "What is the part of the eye that controls how much light enters?",
+        answers: ["pupil", "retina",  "cornea", "eyewall"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "91",
+        category: "Science",
+        grade: "4th Grade",
+        question: 'What planet is nicknamed the “Red Planet?”',
+        answers: ["Jupiter", "Mars",  "Mercury", "Republica"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "92",
+        category: "Science",
+        grade: "4th Grade",
+        question: "Animals that eat only meat are known as…",
+        answers: ["omnivores", "herbivores",  "carnivores", "Ron Swanson"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "93",
+        category: "Science",
+        grade: "4th Grade",
+        question: "How long does Earth take to revolve once around the sun?",
+        answers: ["4 years", "one month",  "24 hours", "365 days"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "94",
+        category: "Science",
+        grade: "4th Grade",
+        question: "What is the freezing point of water?",
+        answers: ["32°F or 0°C", "212°F or 100°C",  "0° Kelvin", "there is no freezing point"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "96",
+        category: "Science",
+        grade: "5th Grade",
+        question: "The Earth is at least how many billion years old?",
+        answers: ["14 billion", "4 billion",  "1 billion", "100 billion"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "97",
+        category: "Science",
+        grade: "5th Grade",
+        question: "What are the three states of matter?",
+        answers: ["reading, writing, arithmetic", "fusion, fission, plasma",  "solid, liquid, gas", "proton, neutron, electron"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "98",
+        category: "Science",
+        grade: "5th Grade",
+        question: "The Earth has 4 layers, the thickest of which is the mantle. What is the thinnest layer called?",
+        answers: ["the GUI", "the Inner Core ",  "the Outer Core", "the Crust"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "99",
+        category: "Science",
+        grade: "5th Grade",
+        question: "Animals without backbones are known as...",
+        answers: ["invertebrates", "crustaceans",  "vertebrates", "politicians"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "100",
+        category: "Science",
+        grade: "5th Grade",
+        question: "What species can live on both water and land?",
+        answers: ["Arachnids", "Amphibians",  "Crustaceans", "Mammels"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
     }
+
 ];
 
 /*
-The Sciences
-First Grade
-What causes tides? The moon
 
-The south pole of the magnet and the north pole of another magnet will do what? Stick together
-
-What is the force that causes objects to fall to the ground? Gravity
-
-A caterpillar changes and grows into a what? Butterfly
-
-What is the biggest organ in the human body? Liver
-
-Second Grade
-What is H2O also known as? Water
-
-What gas is in the air we breathe? Oxygen
-
-What gas do plants breathe in that humans and animals breathe out? Carbon dioxide
-
-Earth is located in what galaxy? The Milky Way
-
-True or false? Bats are mammals. True
-
-Third Grade
-What phenomenon might be felt on the surface when two tectonic plates rub against each other? Earthquake
-
-The hardest naturally occurring mineral is… Diamond
-
-What is the closest planet to the sun? Mercury
-
-The process by which plants eat and make energy is called… Photosynthesis
-
-Does the sun orbit the Earth? No
-
-Fourth Grade
-What is the part of the eye that controls how much light enters? Pupil
-
-What planet is nicknamed the “Red Planet?” Mars
-
-Animals that eat only meat are known as… Carnivores
-
-How long does Earth take to revolve once around the sun? 365 days
-
-What is the freezing point of water? 32°F or 0°C
-
-Fifth Grade
-The Earth is at least how many billion years old? 4 billion
-
-What are the three states of matter? Solid, liquid, and gas
-
-The Earth has 4 layers, the thickest of which is the mantle. What is the thinnest layer called? The Crust
-
-Animals without backbones are known as... Invertebrates
-
-What species can live on both water and land? Amphibians
+    {
+        id: "101",
+        category: "Mathematics",
+        grade: "1st Grade",
+        question: "",
+        answers: ["", "",  "", ""],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
 
 
 Mathematics
