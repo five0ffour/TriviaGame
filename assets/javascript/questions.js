@@ -1255,60 +1255,266 @@ var questions = [
         answers: ["1 1/7th", "0", "8",  "16"],
         answer: 2,
         splash: "assets/images/math.webp"
+    },
+
+    /* Potpourri */
+    {
+        id: "126",
+        category: "Potpourri",
+        grade: "Any",
+        question: "An insect has 6 legs. How many legs does a spider have? ",
+        answers: ["12", "4", "6",  "8"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "127",
+        category: "Potpourri",
+        grade: "Any",
+        question: "The red-shelled insect often known as a “ladybug” or “ladybird” is in fact a type of… ",
+        answers: ["Beetle", "Spider", "Fly",  "Crunch-bug"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "128",
+        category: "Potpourri",
+        grade: "Any",
+        question: "Other than water, the most consumed beverage in the world is… ",
+        answers: ["coffee", "tea", "soda",  "lemonade"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "129",
+        category: "Potpourri",
+        grade: "Any",
+        question: "Although it is acceptable to refer to a peanut as a nut, it is more accurately described as a… ",
+        answers: ["Cashew", "Berry", "Legume",  "Snack"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "130",
+        category: "Potpourri",
+        grade: "Any",
+        question: "What is the primary difference between ocean water and tap water? ",
+        answers: ["pH", "temperature", "taste",  "salt"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "131",
+        category: "Potpourri",
+        grade: "Any",
+        question: "Which of the Earth’s 4 layers is liquid… ",
+        answers: ["the Outer Core", "the Mantle", "the Crust",  "The Inner Core"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "132",
+        category: "Potpourri",
+        grade: "Any",
+        question: "The most famous fault in California is the… ",
+        answers: ["San Andreas", "San Jacinto", "Sierra-Nevada",  "It-wasnt-my"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "133",
+        category: "Potpourri",
+        grade: "Any",
+        question: "A pound cake traditionally contains a pound of which 4 ingredients?",
+        answers: ["baking soda, flour, sugar, chocolate", "flour, butter, eggs, sugar", "flour, sugar, salt, yeast",  "box mix, water, eggs, time"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "134",
+        category: "Potpourri",
+        grade: "Any",
+        question: "The most important article in a newspaper is usually found above the… ",
+        answers: ["by-line", "headline", "fold",  "does anyone still read those?"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "135",
+        category: "Potpourri",
+        grade: "Any",
+        question: "How many months in the calendar year have exactly 30 days?",
+        answers: ["1", "12", "5",  "4"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "136",
+        category: "Potpourri",
+        grade: "Any",
+        question: "Opposite angles in a parallelogram are called… ",
+        answers: ["Complementary", "Antagonist", "Diagonal",  "Complimentary"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "137",
+        category: "Potpourri",
+        grade: "Any",
+        question: "When an item’s copyright expires, the right to reproduce it passes into the… ",
+        answers: ["Library of Congress", "Public Domain", "Private Domain",  "Wikipedia"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "138",
+        category: "Potpourri",
+        grade: "Any",
+        question: "The deepest part of the world’s oceans are found in… ",
+        answers: ["Arctic Circle", "Subduction Zone", "The Mariana Trench",  "The Twilight Zone"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "139",
+        category: "Potpourri",
+        grade: "Any",
+        question: "A^2 + B^2 = C^2 is known as the… ",
+        answers: ["The Quadtratic Equation", "The Heisenberg Princple", "Newton's Second Law of Motion",  "Pythagorean Theorem"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "140",
+        category: "Potpourri",
+        grade: "Any",
+        question: "What is the minimum age for a U.S. President?",
+        answers: ["35 years", "21 years", "50 years",  "60 years"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "141",
+        category: "Potpourri",
+        grade: "Any",
+        question: "Mary has to walk 1 mile north to school and 1 mile south back from school. One day, instead of walking home after school, Mary walks 2 miles east and 1 mile south to the store. In which direction does Mary have to walk to get home from the store? ",
+        answers: ["north", "west", "south",  "east"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "142",
+        category: "Potpourri",
+        grade: "Any",
+        question: "",
+        answers: ["", "", "",  ""],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "143",
+        category: "Potpourri",
+        grade: "Any",
+        question: "How do you abbreviate pound and pounds?",
+        answers: ["lb. and lbs.", "pd. and pds.", "# and ##",  "did you just call me fat?!"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "143",
+        category: "Potpourri",
+        grade: "Any",
+        question: "What sorts of measurements can be found on a standard American ruler?",
+        answers: ["angles, degrees, widths, heights", "feet, yards, meters, micrometers", "cups, gallons, pints, quarts",  "feet, inches, centimeters, millimeters"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "144",
+        category: "Potpourri",
+        grade: "Any",
+        question: "Bricks used as building materials are traditionally made of… ",
+        answers: ["mud", "clay", "concrete",  "iron"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "145",
+        category: "Potpourri",
+        grade: "Any",
+        question: "The energy of a moving object is also called…",
+        answers: ["Potential Energy", "Inertial Energy", "Kinetic energy",  "Atomic Energy"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "146",
+        category: "Potpourri",
+        grade: "Any",
+        question: "A gallon of water weighs how many pounds?",
+        answers: ["ask jack & jill", "32 oz", "4 pounds",  "8 pounds"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "147",
+        category: "Potpourri",
+        grade: "Any",
+        question: "A machine that could work indefinitely without an energy source would also be known as a… ",
+        answers: ["Perpetual Motion Machine", "Rube Goldberg Machine", "Turing Machine",  "Teenager"],
+        answer: 0,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "148",
+        category: "Potpourri",
+        grade: "Any",
+        question: "Bronze is formed by combining two other metals, copper, and tin. Another word for a compound like bronze is… ",
+        answers: ["Precipitate", "Alloy", "Mixture",  "Melting Pot"],
+        answer: 1,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "149",
+        category: "Potpourri",
+        grade: "Any",
+        question: "This positively charged subatomic particle appears in the nucleus of all atoms… ",
+        answers: ["Neutron", "Electron", "Proton",  "quantum"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "150",
+        category: "Potpourri",
+        grade: "Any",
+        question: "In Einstein’s famous E = MC^2, what do the letters stand for?",
+        answers: ["element, mass, charge", "earth, mantle, crust", "eletricity, magnetism, carbon",  "energy, mass, speed of light"],
+        answer: 3,
+        splash: "assets/images/student.jpg"
     }
 ];
-
-/*
-
-Potpourri
-An insect has 6 legs. How many legs does a spider have? 8
-
-The red-shelled insect often known as a “ladybug” or “ladybird” is in fact a type of… Beetle
-
-Other than water, the most consumed beverage in the world is… Tea
-
-Although it is acceptable to refer to a peanut as a nut, it is more accurately described as a… Legume
-
-What is the primary difference between ocean water and tap water? Salt
-
-Which of the Earth’s 4 layers is liquid… The outer core
-
-The most famous fault in California is the… San Andreas
-
-A pound cake traditionally contains a pound of which 4 ingredients? Flour, butter, eggs, and sugar
-
-The most important article in a newspaper is usually found above the… Fold
-
-How many months in the calendar year have exactly 30 days? 4
-
-Opposite angles in a parallelogram are called… Complementary
-
-When an item’s copyright expires, the right to reproduce it passes into the… Public Domain
-
-The deepest part of the world’s oceans are found in… The Mariana Trench
-
-A2 + B2 = C2 is known as the… Pythagorean Theorem
-
-What is the minimum age for a U.S. President? 35
-
-Mary has to walk 1 mile north to school and 1 mile south back from school. One day, instead of walking home after school, Mary walks 2 miles east and 1 mile south to the store. In which direction does Mary have to walk to get home from the store? West
-
-How do you abbreviate pound and pounds? lb. and lbs.
-
-What sorts of measurements can be found on a standard American ruler? Feet, inches, centimeters, and millimeters.
-
-Bricks used as building materials are traditionally made of… Clay
-
-The energy of a moving object is also called… Kinetic energy
-
-A gallon of water weighs how many pounds? 8 pounds
-
-A machine that could work indefinitely without an energy source would also be known as a… Perpetual Motion Machine
-
-Bronze is formed by combining two other metals, copper, and tin. Another word for a compound like bronze is… Alloy
-
-This positively charged subatomic particle appears in the nucleus of all atoms… Proton
-
-In Einstein’s famous E = MC2, what do any of the letters stand for? E: Energy; M: Mass; C: Speed of Light
-
-*/
