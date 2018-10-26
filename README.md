@@ -26,9 +26,10 @@ GitBash installed locally
         It should display the game board and prompt you for an entry
 
 ## Developer notes
-index.html:  main entry point and user interface  
-app.js:  the main mouse click and timer events and UI updates     
-game.js:   the game state, rules handling and solution logic            
+index.html:  main entry point and user interface   
+app.js:  the main mouse click and timer events and UI updates      
+game.js:   the game state, rules handling and solution logic   
+questions.js:  an object database of quesitons             
 
 Overall the game is very straightforward.  The only special feature is to watch how the timers interact.  They will supress user input if they'e already made a guess.
 

@@ -1516,5 +1516,15 @@ var questions = [
         answers: ["element, mass, charge", "earth, mantle, crust", "eletricity, magnetism, carbon",  "energy, mass, speed of light"],
         answer: 3,
         splash: "assets/images/student.jpg"
+    },
+
+    {
+        id: "151",
+        category: "Mind teaser",
+        grade: "Any",
+        question: "A hunter heads out of camp due south one mile in search of bear, sees one and tracks it due east for one mile, shoots, misses it and returns to camp heading due north one mile.  What color was the bear?",
+        answers: [ "brown", "black", "white", "wait, what???"],
+        answer: 2,
+        splash: "assets/images/student.jpg"
     }
 ];
