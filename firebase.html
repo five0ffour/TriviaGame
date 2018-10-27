@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Trivia Game Database Utility</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to Trivia Game Database configuration utility </h1>
+        <p>Click buttons to manage database</p>
+    </header>
+
+    <p>Number of questions available: <span id="question-count">0</span></p>
+    <div style="border: 1px solid #000; padding:20px; width:20%">
+        <button id="publish-btn" name="publish-btn">Publish Questions</button>
+    </div>
+    <div style="border: 1px solid #000; padding:20px; width:20%">
+        <button id="empty-btn" name="empty-btn">Empty Database</button>
+    </div>
+    <div style="border: 1px solid #000; padding:20px;">
+        <ul id="question-list" style="list-style: none;">
+        </ul>
+    </div>
+
+    <!-- Load Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script src="assets/javascript/questions.js"></script>
+    <script src="assets/javascript/firebase.js"></script>
+    <script src="assets/javascript/questionsmaint.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            // Transfer the questions from the archive to the database 
+            $("#publish-btn").on("click", function () {
+                console.log("publish clicked");
+                publishQuestionsToRemoteDatabase();
+            });
+
+            // empty() -- delete all the resident questions and empty the remote database
+            $("#empty-btn").on("click", function () {
+                console.log("empty clicked");
+                questions = "";
+                database.ref().set(questions);
+            });
+
+            // on firebase() - refresh the screen count (array questions loaded in firebase.js) 
+            database.ref().on("value", function(snapshot) {
+                // Note questions were loaded in another event, use the global array here instead of the snapshot
+                $("#question-count").text(questions.length);
+
+                $("#question-list").empty();
+                for (var i=0; (i < questions.length); i++) {
+                    var q = questions[i];
+                    var li = $("<li>");
+                    var p = $("<p>");
+                    p.text(q.id + ") " + q.question);
+                    li.append(p);
+                    $("#question-list").append(li); 
+                }
+            });
+
+        });
+    </script>
+
+</body>
+
+</html>
