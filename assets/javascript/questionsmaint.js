@@ -1,4 +1,8 @@
-    var questionArchive = [
+// questionsmaint.js - these are the source questions for the game.  However, these quesitons are not read by the game 
+//      application directly.  They are used by the firebase maintenance utility to load the database.  This way thte 
+//      user can't peek into the console and cheat to see the answers. 
+
+var questionArchive = [
 
         /* History */
         {
