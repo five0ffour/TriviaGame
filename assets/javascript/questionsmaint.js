@@ -15,13 +15,24 @@ $(document).ready(function () {
     $("#empty-btn").on("click", function () {
         console.log("empty clicked");
 
-        // Empty the master array and the remote database
-        questions = [];
-        database.ref().set(questions);
+        var confirmed = prompt('Are you sure you want to delete all of the data?  Enter "DELETE" to confirm (or cancel to leave it alone)');
+        if (confirmed === null) {
+            alert("Ok.  We won't touch the database");
+        }
+        else if (confirmed.trim().toLowerCase() === "delete") {
+            // Empty the master array and the remote database
+            questions = [];
+            database.ref().set(questions);
 
-        // clear the UI table too
-        var div = $("<div>");
-        $("#trivia-table > tbody").html(div);
+            // clear the UI table too
+            var div = $("<div>");
+            $("#trivia-table > tbody").html(div);
+
+            alert("Database deleted");
+        } else {
+            alert("Ok.  We won't touch the database");
+        } 
+
     });
 
     // on firebase() - refresh the screen count (array questions loaded in firebase.js) 
