@@ -20,15 +20,13 @@ function publishQuestionsToRemoteDatabase() {
 
 }
 
-// on database value update() - refresh questions array with database updates
-database.ref().on("value", function (snapshot) {
+database.ref().on("child_added", function (childSnapshot) {
 
-    // overwrite our question array with the firebase database content
-    var count = 0;
-    if (snapshot.exists()) {
-        questions = snapshot.val();
-        count = questions.length;
-    }
+    console.log("--- database child event ----");
+    console.log(childSnapshot.val());
+    console.log("------------------------ ----");
 
-    console.log("database event() - loaded " + count + " questions from firebase")
+    // Save the new question into our master questions array.
+    var q = childSnapshot.val();
+    questions.push(q);
 });

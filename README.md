@@ -11,6 +11,8 @@ Once the game is over it gives a final grade score.  The player has an option of
 ## Getting Started
 To get started,  copy the program to a clean directory and run "index.html" in your browser.   The program is ready to start automatically.  From there,  simply use your mouse to enter your guesses each round.   The game will automatically restart each question after a win or loss and offer a game restart button at the end.
 
+Note:  It uses Google Firebase to source its questions.   The best experience would be to edit the firebase.js repository to add your own keyed configuration file.   See google's docs on how to get a key,  then cut & paste in the webapp configuration data to firebase.js.   Once that is complete, run firebase.html and hit the "publish questions" to load the database.  
+
 ## Prerequisites
 A modern browser and an internet connection.   Chrome works best, but others should be fine too.
 A modern IDE - it was developed using Visual Studio Code, but any text editor would work, including notepad.
@@ -29,12 +31,20 @@ GitBash installed locally
 index.html:  main entry point and user interface   
 app.js:  the main mouse click and timer events and UI updates      
 game.js:   the game state, rules handling and solution logic   
-questions.js:  an object database of quesitons             
+questions.js:  an object database of quesitons, populated from firebase once the game loads
+questionsmaint.js:  the source of the questions that are loaded to firebase (see below)         
+firebase.js:  google firebase API to read questions from remote database
+
+### Maintentance App  
+firebase.html - maintenance utility to populate remote database and update questions
+questionmaint.js - logic to support the firebase maintentance screen
 
 Overall the game is very straightforward.  The only special feature is to watch how the timers interact.  They will supress user input if they'e already made a guess.
 
 ## Built With
 jQuery 3.3.1 - JavaScript library  
+Google Firebase 4.12.0 - realtime database
+Bootstrap 4.0.0 - UI framework
 
 ## Authors
 Michael Galarneau - Initial work - Five0fFour

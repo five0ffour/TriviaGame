@@ -2,6 +2,8 @@
 /*        - typically references the game object to manage the actual game state    */
 $(document).ready(function () {
 
+    /* Master array of questions loaded from firebase */
+
     /* Global game Timers */
     const secondsPerRound = 60;                 // time user is allowed to choose their answer
     const secondsBetweenRounds = 5;             // time user is allowed to view result and rest before next question

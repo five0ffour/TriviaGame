@@ -6,66 +6,114 @@
     <title>Trivia Game Database Utility</title>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+    <style>
+        #trivia-table th,
+            td {
+              display: inline-block;
+              width: 15%;
+            }
+
+        #trivia-table #td-question {
+              display: inline-block;
+              width: 55%;
+            }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>Welcome to Trivia Game Database configuration utility </h1>
-        <p>Click buttons to manage database</p>
-    </header>
+    <div class="container">
 
-    <p>Number of questions available: <span id="question-count">0</span></p>
-    <div style="border: 1px solid #000; padding:20px; width:20%">
-        <button id="publish-btn" name="publish-btn">Publish Questions</button>
-    </div>
-    <div style="border: 1px solid #000; padding:20px; width:20%">
-        <button id="empty-btn" name="empty-btn">Empty Database</button>
-    </div>
-    <div style="border: 1px solid #000; padding:20px;">
-        <ul id="question-list" style="list-style: none;">
-        </ul>
+        <!-- Trivia Maintenance -->
+        <header>
+            <div class="card mb-4 bg-dark text-white text-center">
+                <h2>Trivia Database Configuration Utility </h2>
+            </div>
+        </header>
+
+        <!-- Trivia Stats -->
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">Trivia Stats</div>
+                    <div class="card-body text-center">
+                        <p>Number of questions available:</p>
+                        <p id="question-count">0</p>
+                    </div>
+                </div>
+
+                <div class="card mb-4">
+                    <div class="card-header">Database Bulk Management - publish from .js archive</div>
+                    <div class="card-body text-center">
+                        <button id="publish-btn" name="publish-btn" class="btn-primary">Publish Questions</button>
+                        <button id="empty-btn" name="empty-btn" class="btn-danger">Empty Database</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card mb-4">
+                    <div class="card-header">Add Question</div>
+                    <div class="card-body">
+                        <!-- Entry Form -->
+                        <form>
+                            <div class="form-group">
+                                <label for="role-input">Category</label>
+                                <input class="form-control" id="category-input" placeholder="History" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="grade-input">Grade</label>
+                                <input class="form-control" id="grade-input" placeholder="1st Grade" type="text">
+                            </div>
+                            <div class="form-group">
+                                <label for="question-input">Question</label>
+                                <input class="form-control" id="question-input" placeholder="your new question" type="text">
+                            </div>
+                            <button class="btn btn-primary float-right" id="add-trivia-btn">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trivia Questions List -->
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-4">
+                    <div class="card-header">Trivia Questions</div>
+                    <div class="card-body">
+                        <table class="table table-sm table-hover" id='trivia-table'>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Num</th>
+                                    <th scope="col">Category</th>
+                                    <th scope="col">Grade</th>
+                                    <th scope="col">Question</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- questions will be displayed here -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <!-- Load Firebase -->
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <!-- Load Javascript -->
     <script src="assets/javascript/questions.js"></script>
     <script src="assets/javascript/firebase.js"></script>
     <script src="assets/javascript/questionsmaint.js"></script>
 
-    <script type="text/javascript">
-        $(document).ready(function () {
-
-            // Transfer the questions from the archive to the database 
-            $("#publish-btn").on("click", function () {
-                console.log("publish clicked");
-                publishQuestionsToRemoteDatabase();
-            });
-
-            // empty() -- delete all the resident questions and empty the remote database
-            $("#empty-btn").on("click", function () {
-                console.log("empty clicked");
-                questions = "";
-                database.ref().set(questions);
-            });
-
-            // on firebase() - refresh the screen count (array questions loaded in firebase.js) 
-            database.ref().on("value", function(snapshot) {
-                // Note questions were loaded in another event, use the global array here instead of the snapshot
-                $("#question-count").text(questions.length);
-
-                $("#question-list").empty();
-                for (var i=0; (i < questions.length); i++) {
-                    var q = questions[i];
-                    var li = $("<li>");
-                    var p = $("<p>");
-                    p.text(q.id + ") " + q.question);
-                    li.append(p);
-                    $("#question-list").append(li); 
-                }
-            });
-
-        });
-    </script>
 
 </body>
 
