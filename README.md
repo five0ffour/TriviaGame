@@ -26,6 +26,9 @@ GitBash installed locally
          "git clone https://github.com/five0ffour/TriviaGame.git"
 4.  Open index.html in your favorite browser
         It should display the game board and prompt you for an entry
+  
+## Sample install  
+http://michaelgalarneau.com/TriviaGame/
 
 ## Developer notes
 index.html:  main entry point and user interface   
